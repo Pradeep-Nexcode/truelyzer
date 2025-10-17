@@ -1,18 +1,18 @@
-"use client"
-import { motion } from "framer-motion"
- 
-import Link from "next/link"
+"use client";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
+
 const ContactCTA = () => {
   return (
     <section
       id="contact"
-      className="relative py-32 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white overflow-hidden"
+      className="relative py-32 bg-gradient-to-br from-emerald-500 via-emerald-600 to-emerald-700 text-white overflow-hidden"
     >
       {/* Subtle glowing shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-[600px] h-[600px] bg-white/10 rounded-full blur-3xl -top-40 -left-40 animate-pulse"></div>
-        <div className="absolute w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-3xl bottom-0 right-0"></div>
+        <div className="absolute w-[500px] h-[500px] bg-emerald-400/10 rounded-full blur-3xl bottom-0 right-0"></div>
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto text-center px-6">
@@ -44,7 +44,7 @@ const ContactCTA = () => {
           <Link
             href="https://wa.me/918610737186?text=Hi!%20I%20visited%20Truelyzer%20and%20want%20to%20know%20more%20about%20your%20website%20services."
             target="_blank"
-            className="flex items-center gap-2 bg-white text-purple-700 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="flex items-center gap-2 bg-white text-emerald-700 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Let’s Talk on WhatsApp <FaArrowRight size={18} />
           </Link>
@@ -59,7 +59,7 @@ const ContactCTA = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactCTA
+export default ContactCTA;

@@ -1,7 +1,7 @@
-"use client"
-import { motion } from "framer-motion"
+"use client";
+import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
-import Image from "next/image"
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -28,15 +28,15 @@ const testimonials = [
       "From design to deployment, everything was handled so smoothly. Truelyzer is our go-to team for web projects.",
     image: "https://randomuser.me/api/portraits/men/56.jpg",
   },
-]
+];
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="relative py-24 bg-gradient-to-b from-gray-50 via-purple-50/30 to-white overflow-hidden">
+    <section id="testimonials" className="relative py-24 bg-gradient-to-b from-emerald-500 via-emerald-400/30 to-white overflow-hidden">
       {/* Subtle gradient light effect */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute w-[600px] h-[600px] bg-purple-300/20 rounded-full blur-3xl -top-40 -left-40"></div>
-        <div className="absolute w-[500px] h-[500px] bg-blue-300/20 rounded-full blur-3xl bottom-0 right-0"></div>
+        <div className="absolute w-[600px] h-[600px] bg-emerald-300/20 rounded-full blur-3xl -top-40 -left-40"></div>
+        <div className="absolute w-[500px] h-[500px] bg-emerald-300/20 rounded-full blur-3xl bottom-0 right-0"></div>
       </div>
 
       <div className="max-w-6xl mx-auto text-center relative z-10 px-6">
@@ -44,7 +44,7 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
+          className="text-4xl md:text-5xl font-bold text-white mb-6"
         >
           What Our Clients Say
         </motion.h2>
@@ -53,7 +53,7 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-gray-600 max-w-2xl mx-auto mb-12"
+          className="text-gray-300 max-w-2xl mx-auto mb-12"
         >
           We’ve helped startups, local businesses, and brands bring their ideas to life with stunning, high-performing websites.
         </motion.p>
@@ -66,7 +66,7 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="bg-white/70 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col items-center"
+              className="bg-white/70 backdrop-blur-xl border border-emerald-300 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 flex flex-col items-center"
             >
               <Image
                 src={t.image}
@@ -77,7 +77,7 @@ const Testimonials = () => {
               />
               <div className="flex mb-3">
                 {[1, 2, 3, 4, 5].map((s) => (
-                  <FaStar key={s} size={18} className="text-yellow-400 fill-yellow-400" />
+                  <FaStar key={s} size={18} className="text-emerald-500 fill-emerald-500" />
                 ))}
               </div>
               <p className="text-gray-700 text-sm italic mb-4 leading-relaxed">“{t.quote}”</p>
@@ -88,7 +88,7 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;
