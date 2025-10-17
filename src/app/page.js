@@ -1,4 +1,4 @@
-import { Navbar, Hero, Portfolio, Process,Testimonials,ContactCTA ,Footer,OurWorks} from '@/components';
+import { Navbar, Hero, Portfolio, Process,Testimonials,ContactCTA ,Footer,OurWorks, Blogs} from '@/components';
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
       <Process />
       <OurWorks/>
       <Testimonials/>
+      <Blogs />
       <ContactCTA/>
       <Footer />
     </>

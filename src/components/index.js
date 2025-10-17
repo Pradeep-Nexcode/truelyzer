@@ -10,6 +10,7 @@ export { default as Testimonials} from './sections/Testimonials'
 export { default as ContactCTA} from './sections/ContactCTA'
 export { default as Footer } from './sections/Footer'
 export { default as OurWorks } from './sections/OurWorks'
+export { default as Blogs } from './sections/Blogs'
 // UI Components
 export { default as Button } from './ui/Button';
 export { default as Container } from './ui/Container';
