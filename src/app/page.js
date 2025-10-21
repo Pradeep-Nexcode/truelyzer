@@ -3,7 +3,6 @@ import { Navbar, Hero, Portfolio, Process,Testimonials,ContactCTA ,Footer,OurWor
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero /> 
       <Portfolio />
       {/* <CursorParticles/> */}
@@ -12,7 +11,6 @@ export default function Home() {
       <Testimonials/>
       <Blogs />
       <ContactCTA/>
-      <Footer />
     </>
   );
 }

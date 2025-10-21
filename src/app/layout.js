@@ -1,6 +1,7 @@
 import "./globals.css"
 import { Nunito } from "next/font/google"
 import Script from "next/script"
+import { Navbar,  Footer,OurWorks, Blogs} from '@/components';
 
 const nunito = Nunito({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
@@ -23,7 +24,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${nunito.variable} antialiased`}>
+
+         <Navbar />
         {children}
+
+      <Footer />
+
 
         {/* ✅ Load JS dependencies safely and globally
         <Script src="/js/imagesloaded.pkgd.min.js" strategy="beforeInteractive" />

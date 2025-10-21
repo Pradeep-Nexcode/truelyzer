@@ -1,0 +1,129 @@
+Excellent — that’s a *very* smart move 👏
+
+You’re absolutely right: having only one page (even if it looks great) **limits SEO growth**, because search engines rank based on **content depth**, **topic coverage**, and **internal linking**.
+
+So, since your site is a **web development / freelance services** brand (`Truelyzer`), here’s a **strategic page structure** that fits your brand, boosts SEO, and feels natural for your audience.
+
+---
+
+## 🌐 Recommended Site Structure for Truelyzer
+
+### 🏠 1. **Home Page**
+
+* Already done ✅
+* Keep it as your **main marketing page** with sections like:
+
+  * Hero
+  * Services Overview
+  * Featured Projects
+  * Client Testimonials
+  * Contact CTA
+
+---
+
+### 💼 2. **Services Page**
+
+➡️ `/services`
+Show each core service with dedicated cards or sections:
+
+* Web Development
+* UI/UX Design
+* Branding
+* SEO Optimization
+* Maintenance & Support
+
+👉 Each service can have its own subpage later, like `/services/web-development`.
+
+**SEO Keywords:** “web development services”, “UI design agency”, “freelance web developer”.
+
+---
+
+### 🧠 3. **About Page**
+
+➡️ `/about`
+Tell your brand story — why Truelyzer exists.
+Include:
+
+* Mission, vision, and values
+* Team or founder info
+* Your tech stack and expertise
+* Highlights like “5+ years experience”, “projects delivered”, etc.
+
+**SEO Keywords:** “about web development company”, “freelance developer in [your city/country]”.
+
+---
+
+### 🧱 4. **Work / Portfolio Page**
+
+➡️ `/work` or `/projects`
+Showcase your best projects with screenshots, short case studies, and tech used.
+Each project can open a detailed page like `/work/project-name`.
+
+**SEO Keywords:** “web design portfolio”, “website examples by Truelyzer”.
+
+---
+
+### ✍️ 5. **Blog / Insights Page**
+
+➡️ `/blog`
+This is crucial for SEO — lets you post articles on:
+
+* “Top 10 web design trends 2025”
+* “Why every business needs a fast website”
+* “React vs Next.js for startups”
+
+**SEO Keywords:** naturally added in each article.
+
+---
+
+### 📞 6. **Contact Page**
+
+➡️ `/contact`
+Simple and conversion-focused:
+
+* Contact form
+* Email / phone / WhatsApp
+* Map (optional)
+* “Get a Quote” CTA
+
+---
+
+### ⭐ 7. **Testimonials / Clients Page** *(optional but powerful)*
+
+➡️ `/testimonials` or `/clients`
+Builds trust — show logos, quotes, or short stories from clients.
+
+---
+
+### ⚙️ 8. **FAQ Page**
+
+➡️ `/faq`
+Helps SEO *and* user experience.
+Cover questions like:
+
+* “How long does a website project take?”
+* “Do you offer maintenance?”
+* “What’s your pricing model?”
+
+---
+
+### 🚀 9. **Careers / Join Us** *(future expansion)*
+
+➡️ `/careers`
+If you ever want to grow into a small team or agency.
+
+---
+
+## 📈 Suggested Order to Build Next
+
+1️⃣ `/services`
+2️⃣ `/about`
+3️⃣ `/work`
+4️⃣ `/contact`
+5️⃣ `/blog`
+
+This flow makes your site feel **complete and credible** quickly — and gives Google enough **content variety** to start ranking you.
+
+---
+
+Would you like me to create a **page structure plan** (folder + file layout in Next.js 15) and **SEO titles + meta descriptions** for each of these pages next? That will make your next step crystal clear.
