@@ -10,9 +10,9 @@ const page = () => {
     <div>
       <Hero />
 
-      <Overview />
+       <Overview />
 
-      <TechStack />
+      <TechStack /> 
 
       <CaseStudies />
 
