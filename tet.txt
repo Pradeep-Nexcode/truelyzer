@@ -187,3 +187,76 @@ Here’s what sections you should include for a professional, high-performing bl
 ---
 
 Would you like me to now **generate the full React code** for this main blog page following your current design system (dark + emerald theme, Framer Motion animations, and Tailwind layout)?
+
+
+
+------------------------------
+
+
+
+Perfect 👏 — that’s a smart and realistic plan.
+Starting with **20–30 strong blogs across 2–3 categories** gives your site a solid SEO base and makes it look active from day one.
+
+Let’s start with your **Category 1: Web Development** — here’s a list of **SEO-friendly, click-worthy blog title ideas** you can use or modify.
+
+---
+
+## 💻 **Web Development Blog Title Ideas**
+
+### 🔹 **Beginner / Educational**
+
+1. “The Complete Beginner’s Guide to Web Development in 2025”
+2. “Frontend vs Backend: What’s the Real Difference?”
+3. “How Websites Actually Work: A Simple Explanation for New Developers”
+4. “HTML, CSS, and JavaScript — The Perfect Trio Explained”
+5. “Top 10 Free Resources to Learn Web Development from Scratch”
+6. “How to Build Your First Website Step-by-Step (Even If You’re Not a Developer)”
+7. “What Every Beginner Should Know About APIs”
+
+---
+
+### 🔹 **Modern Tech & Frameworks**
+
+8. “Next.js vs React: Which Should You Choose in 2025?”
+9. “Why Next.js 15 is a Game Changer for Modern Web Apps”
+10. “Building High-Performance Websites with Tailwind CSS”
+11. “The Future of Frontend Development: What to Expect in 2025”
+12. “How GraphQL Is Changing the Way We Build APIs”
+13. “Why TypeScript Makes Your Web Apps More Reliable”
+14. “5 Tools Every Modern Frontend Developer Should Use”
+
+---
+
+### 🔹 **Performance & Optimization**
+
+15. “How to Optimize Your Website for Speed (Core Web Vitals Guide)”
+16. “Lazy Loading, Code Splitting, and Other Speed Hacks You Need to Know”
+17. “The Ultimate SEO Checklist for Web Developers”
+18. “Why Lighthouse Score Matters — And How to Improve Yours”
+19. “How to Build a Website That Loads in Under 2 Seconds”
+
+---
+
+### 🔹 **Career & Trends**
+
+20. “Top Web Development Trends to Watch in 2025”
+21. “Is Web Development Still a Good Career in 2025?”
+22. “How to Build a Portfolio That Actually Gets You Clients”
+23. “Freelance vs Full-Time Developer: Which Path Is Right for You?”
+24. “5 Mistakes That Are Slowing Down Your Web Dev Career”
+
+---
+
+### 🔹 **Tech Deep Dives / Advanced**
+
+25. “Server Components in Next.js Explained Simply”
+26. “How to Use Edge Functions to Boost Performance”
+27. “Static vs Dynamic Rendering — Which One Should You Choose?”
+28. “The Hidden Power of ISR (Incremental Static Regeneration) in Next.js”
+29. “Building Secure Web Apps: A Practical Guide for Developers”
+30. “How to Implement Authentication in Next.js with NextAuth.js”
+
+---
+
+Would you like me to now create **Category 2 ideas** (for example, “UI/UX Design” or “Tech & Tools”)?
+Or do you want me to go deeper on **Web Development** first — like giving **SEO descriptions, meta keywords, and short intros** for each title?

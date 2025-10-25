@@ -220,54 +220,14 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { blogs } from "@/data/blogs";
 
 const BlogPostPage = ({ post }) => {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
 
   // Example data (replace with dynamic props)
-  post = post || {
-    title: "Mastering Web Performance with Next.js 15",
-    date: "October 20, 2025",
-    readTime: "8 min read",
-    views: "2.4K",
-    author: {
-      name: "Pradeep M",
-      role: "Full-Stack Developer",
-      avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200",
-      bio: "Full-stack developer passionate about building scalable web applications and sharing knowledge with the community."
-    },
-    category: "Web Development",
-    tags: ["Next.js", "Performance", "React", "Web Vitals"],
-    image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    content: `
-      Next.js 15 introduces powerful performance upgrades like partial prerendering, 
-      edge-optimized rendering, and React Compiler support. In this comprehensive guide, 
-      we'll explore how to harness these features to build faster, more scalable web applications.
-
-      ## Why Performance Matters
-
-      In today's fast-paced digital world, users expect websites to load instantly. Studies show that 
-      53% of mobile users abandon sites that take longer than 3 seconds to load. Next.js 15 addresses 
-      this challenge with groundbreaking features.
-
-      ## Key Performance Features
-
-      ### 1. Partial Prerendering
-      This revolutionary feature allows you to combine static and dynamic content in the same route, 
-      giving you the best of both worlds.
-
-      ### 2. Edge-Optimized Rendering
-      Deploy your applications closer to users with edge runtime support, reducing latency significantly.
-
-      ### 3. React Compiler Support
-      Automatic optimization of your React components without manual memoization.
-
-      ## Implementation Guide
-
-      Let's dive into practical examples of implementing these features in your Next.js application...
-    `,
-  };
+  post =  blogs[0]
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
