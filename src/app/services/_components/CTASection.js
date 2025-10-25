@@ -132,8 +132,8 @@ const CTASection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed"
               >
-                Join <span className="text-white font-semibold">50+ successful businesses</span> who've transformed their digital presence with Truelyzer.
-                <span className="block mt-2 text-gray-500">Let's build something extraordinary together.</span>
+                Join <span className="text-white font-semibold">50+ successful businesses</span> who&apos;ve transformed their digital presence with Truelyzer.
+                <span className="block mt-2 text-gray-500">Let&apos;s build something extraordinary together.</span>
               </motion.p>
 
               {/* Benefits Grid */}

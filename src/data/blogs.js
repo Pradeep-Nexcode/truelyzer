@@ -8,18 +8,23 @@ export const blogs = [
     metaDescription:
       "Learn web development in 2025 with this beginner-friendly guide. Explore frontend, backend, frameworks, tools, and your step-by-step roadmap to success.",
     date: "October 21, 2025",
-    readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
-    tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
+    readTime: "15 min read",
+    views: "4.7K",
+    category: "Frontend Roadmap",
+    tags: [
+      "Web Development",
+      "Programming Basics",
+      "Career Guide",
+      "Learning Path",
+    ],
     image:
-      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1200",
     author: {
-      name: "Pradeep M",
-      role: "Full-Stack Developer",
+      name: "Sarah Johnson",
+      role: "Senior Developer Advocate",
       avatar:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200",
-      bio: "Full-stack developer passionate about building scalable web applications and sharing knowledge with the community.",
+        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200",
+      bio: "Developer advocate and coding educator with 8+ years of experience. Passionate about making programming accessible to everyone.",
     },
     content: `
  # The Complete Beginner's Guide to Web Development in 2025
@@ -314,19 +319,24 @@ Start small. Build something today, even if it's just a basic HTML page with you
     metaTitle: "Frontend vs Backend: Key Differences Explained Simply",
     metaDescription:
       "Confused about frontend vs backend? Learn the real differences, which path to choose, and how both work together to build amazing websites in 2025.",
-    date: "October 22, 2025",
-    readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
-    tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
+    date: "October 23, 2025",
+    readTime: "12 min read",
+    views: "2.8K",
+    category: "Backend & Architecture",
+    tags: [
+      "System Design",
+      "Backend Development",
+      "Architecture Patterns",
+      "Best Practices",
+    ],
     image:
-      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200",
     author: {
-      name: "Pradeep M",
-      role: "Full-Stack Developer",
+      name: "Michael Chen",
+      role: "Lead Software Architect",
       avatar:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200",
-      bio: "Full-stack developer passionate about building scalable web applications and sharing knowledge with the community.",
+        "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200",
+      bio: "Software architect specializing in scalable systems and distributed computing. Helping teams build robust, maintainable applications.",
     },
 
     content: `
@@ -749,19 +759,25 @@ Absolutely! Many developers switch or expand their skills throughout their caree
     metaTitle: "How Websites Work: Simple Guide for Beginners (2025)",
     metaDescription:
       "Learn how websites work behind the scenes! This beginner-friendly guide explains DNS, servers, frontend, backend, and APIs in simple terms.",
-    date: "October 22, 2025",
-    readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
-    tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
+    date: "October 24, 2025",
+    readTime: "8 min read",
+    views: "1.9K",
+    category: "DevOps & Infrastructure",
+    tags: [
+      "Web Infrastructure",
+      "DNS",
+      "Servers",
+      "Networks",
+      "Beginner Guide",
+    ],
     image:
-      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1200",
     author: {
-      name: "Pradeep M",
-      role: "Full-Stack Developer",
+      name: "Emma Rodriguez",
+      role: "DevOps Engineer",
       avatar:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200",
-      bio: "Full-stack developer passionate about building scalable web applications and sharing knowledge with the community.",
+        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200",
+      bio: "DevOps engineer with a knack for explaining complex technical concepts in simple terms. Focused on cloud infrastructure and web performance.",
     },
 
     content:
@@ -968,13 +984,13 @@ Let's visualize the full flow of how frontend and backend work together:
 
 This entire cycle often happens in under a second. The connection between frontend and backend is called an API (Application Programming Interface)—think of it as a menu of actions the backend offers to the frontend.
 
-APIs define endpoints (URLs) like ` /
+APIs define endpoints (URLs) like &grave; /
       api /
-      login`, ` /
+      login&grave; , &grave; /
       api /
-      posts`, or ` /
+      posts&grave;, or &grave; /
       api /
-      comments` that the frontend can call to request or send data. It's the bridge that lets both sides communicate smoothly.
+      comments&grave; that the frontend can call to request or send data. It's the bridge that lets both sides communicate smoothly.
 
 ---
 
@@ -1047,18 +1063,18 @@ Understanding the concepts in this article? Just this reading session! Building 
     metaDescription:
       "Learn HTML, CSS, and JavaScript basics! This beginner-friendly guide explains how these three technologies work together to build websites with examples.",
     date: "October 22, 2025",
-    readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
-    tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
+    readTime: "13 min read",
+    views: "3.1K",
+    category: "Frontend Essentials",
+    tags: ["HTML5", "CSS3", "JavaScript", "Web Fundamentals", "Coding Basics"],
     image:
-      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1200",
     author: {
-      name: "Pradeep M",
-      role: "Full-Stack Developer",
+      name: "Rachel Thompson",
+      role: "Frontend Development Lead",
       avatar:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200",
-      bio: "Full-stack developer passionate about building scalable web applications and sharing knowledge with the community.",
+        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200",
+      bio: "Frontend development expert with 7+ years of experience. Passionate about teaching web technologies and making coding accessible to everyone.",
     },
 
     content:
@@ -1083,9 +1099,9 @@ Think of them as an inseparable team where each member has a specific role. HTML
 
 HTML (HyperText Markup Language) is the skeleton of every webpage. It defines the structure and content—what elements appear on the page and how they're organized.
 
-When you see a heading, paragraph, image, button, or link on a website, that's HTML telling the browser "put a heading here, then a paragraph, then an image." HTML uses tags (wrapped in angle brackets like ` <
+When you see a heading, paragraph, image, button, or link on a website, that's HTML telling the browser "put a heading here, then a paragraph, then an image." HTML uses tags (wrapped in angle brackets like ' <
       h1 >
-      `) to mark up different types of content.
+      ') to mark up different types of content.
 
 ### Basic HTML Elements
 
@@ -1119,13 +1135,13 @@ Here's what basic HTML structure looks like:
 </html>
 </code>
 
-Every HTML document starts with <!DOCTYPE html> which tells the browser "this is an HTML5 document." The ` <
+Every HTML document starts with <!DOCTYPE html> which tells the browser "this is an HTML5 document." The &grave; <
       html >
-      ` tag wraps everything. Inside, you have two main sections:
+      &grave; tag wraps everything. Inside, you have two main sections:
 
-The "<head>" contains metadata like the page title and links to CSS files. The ` <
+The "<head>" contains metadata like the page title and links to CSS files. The &grave; <
       body >
-      ` contains all the visible content users actually see.
+      &grave; contains all the visible content users actually see.
 
 HTML is purely about structure and content. It doesn't care about colors, fonts, or layouts—that's where CSS comes in.
 
@@ -1191,13 +1207,13 @@ button:hover {
 
 This CSS targets our HTML elements and transforms them visually. The heading becomes blue and centered. The button gets a nice blue background with rounded corners that darkens when you hover over it.
 
-CSS connects to HTML through a ` <
+CSS connects to HTML through a &grave; <
       link >
-      ` tag in the HTML's ` <
+      &grave; tag in the HTML's &grave; <
       head >
-      ` section, or by placing CSS directly in ` <
+      &grave; section, or by placing CSS directly in &grave; <
       style >
-      ` tags.
+      &grave; tags.
 
 ---
 
@@ -1504,19 +1520,24 @@ You can learn HTML and CSS basics in 1-2 weeks and build simple static websites.
     metaTitle: "Top 10 Free Resources to Learn Web Development (2025)",
     metaDescription:
       "Discover the best free resources to learn web development! From freeCodeCamp to MDN, start your coding journey today without spending a penny.",
-    date: "October 22, 2025",
-    readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
-    tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
+    date: "October 25, 2025",
+    readTime: "10 min read",
+    views: "5.0K",
+    category: "Education & Resources",
+    tags: [
+      "Education",
+      "Free Resources",
+      "Online Learning",
+      "Career Development",
+    ],
     image:
-      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=1200",
     author: {
-      name: "Pradeep M",
-      role: "Full-Stack Developer",
+      name: "David Park",
+      role: "Education Technology Specialist",
       avatar:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200",
-      bio: "Full-stack developer passionate about building scalable web applications and sharing knowledge with the community.",
+        "https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg?auto=compress&cs=tinysrgb&w=200",
+      bio: "Ed-tech specialist and coding bootcamp instructor. Dedicated to making tech education accessible and effective for everyone.",
     },
 
     content: `
@@ -1810,23 +1831,30 @@ For structured, guided learning: start with **freeCodeCamp**. It provides a comp
   {
     key: "development",
 
-    slug: "",
-    title: "",
-    metaTitle: "",
-    metaDescription: "",
-    date: "October 22, 2025",
-    readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
-    tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
+    slug: "build-your-first-website-guide-2025",
+    title: "Build Your First Website: A Complete Guide for Beginners",
+    metaTitle: "How to Build Your First Website in 2025: Complete Guide",
+    metaDescription:
+      "Learn how to create a professional website from scratch! Step-by-step guide for beginners using both no-code and code-based approaches.",
+    date: "October 20, 2025",
+    readTime: "11 min read",
+    views: "2.0K",
+    category: "Getting Started",
+    tags: [
+      "Website Creation",
+      "No-Code Tools",
+      "Web Hosting",
+      "Domain Names",
+      "Getting Started",
+    ],
     image:
-      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200",
     author: {
-      name: "Pradeep M",
-      role: "Full-Stack Developer",
+      name: "Alex Martinez",
+      role: "Web Development Instructor",
       avatar:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200",
-      bio: "Full-stack developer passionate about building scalable web applications and sharing knowledge with the community.",
+        "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=200",
+      bio: "Professional web developer and instructor with a passion for helping beginners create their first websites. Expertise in both traditional coding and modern no-code solutions.",
     },
 
     content: `
@@ -2390,8 +2418,8 @@ You can launch a website for free using a subdomain (yourname.netlify.app or you
       "Learn what APIs are, how they work, and how to use them as a beginner developer — with real examples and easy explanations.",
     date: "October 22, 2025",
     readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
+    views: "2.6K",
+    category: "API Basics",
     tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
     image:
       "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -2860,8 +2888,8 @@ Start by testing APIs in your browser console using 'fetch()' to see responses. 
       "Learn the key differences between Next.js and React, and which one you should choose for your 2025 web projects.",
     date: "October 22, 2025",
     readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
+    views: "2.2K",
+    category: "Frameworks & Trends",
     tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
     image:
       "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -3287,8 +3315,8 @@ Next.js is significantly better for SEO out of the box. Its server-side renderin
       "Discover what makes Next.js 15 a milestone release — from React 19 integration to edge performance and Turbopack improvements.",
     date: "October 22, 2025",
     readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
+    views: "2.5K",
+    category: "Performance & CSS",
     tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
     image:
       "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -3573,7 +3601,7 @@ import { revalidatePath } from 'next/cache';
 
 export async function updatePost(postId) {
   await db.posts.update(postId);
-  revalidatePath(&grave/blog/${postId}&grave);
+  revalidatePath(&grave/blog/$&#123;postId}&grave);
 }
 </code>
 
@@ -3823,8 +3851,8 @@ Enhanced metadata APIs automatically generate meta tags, Open Graph images, and 
       "Learn how Tailwind CSS helps developers build fast, scalable, and beautiful websites. Discover optimization tips and best practices for 2025.",
     date: "October 22, 2025",
     readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
+    views: "2.9K",
+    category: "Future Frontend",
     tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
     image:
       "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -4089,7 +4117,7 @@ const Button = ({ children, variant = 'primary' }) => {
   };
   
   return (
-    <button className={&grave${baseClasses} ${variants[variant]}&grave}>
+    <button className={&grave$&#123;baseClasses} $&#123;variants[variant]}&grave}>
       {children}
     </button>
   );
@@ -4788,8 +4816,8 @@ Stay curious. Keep learning. Build amazing things. The best is yet to come.
       "Discover how GraphQL is revolutionizing API development. Learn the differences between REST vs GraphQL, advantages, and why developers are making the switch in 2025.",
     date: "October 22, 2025",
     readTime: "9 min read",
-    views: "1.8K",
-    category: "Web Development",
+    views: "3.3K",
+    category: "API & Data",
     tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
     image:
       "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -5110,7 +5138,7 @@ const resolvers = {
 
 const server = new ApolloServer({ typeDefs, resolvers });
 server.listen().then(({ url }) => {
-  console.log(&grave;Server ready at ${url}&grave;);
+  console.log(&grave;Server ready at $&#123;url}&grave;);
 });
 </code>
 

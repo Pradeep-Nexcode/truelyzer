@@ -3,8 +3,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, Tag, ArrowRight, Clock, Eye, Sparkles, TrendingUp } from "lucide-react";
+import {
+  Calendar,
+  Tag,
+  ArrowRight,
+  Clock,
+  Eye,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
 import Link from "next/link";
+import { blogs } from "@/data/blogs";
 
 const posts = [
   {
@@ -19,90 +28,33 @@ const posts = [
     tagColor: "emerald",
     image:
       "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    trending: true
-  },
-  {
-    id: 2,
-    title: "UX Tips That Convert Visitors Into Customers",
-    date: "Sep 22, 2025",
-    readTime: "6 min",
-    views: "1.8K",
-    excerpt:
-      "Learn essential UI/UX principles that increase engagement and improve conversion rates for your web projects.",
-    tag: "Design",
-    tagColor: "purple",
-    image:
-      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  },
-  {
-    id: 3,
-    title: "How We Improved Site Performance by 85%",
-    date: "Aug 28, 2025",
-    readTime: "10 min",
-    views: "3.2K",
-    excerpt:
-      "A full breakdown of real performance optimization strategies—from image compression to caching and code splitting.",
-    tag: "Performance",
-    tagColor: "orange",
-    image:
-      "https://images.pexels.com/photos/6476580/pexels-photo-6476580.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  },
-  {
-    id: 4,
-    title: "Building APIs with GraphQL and Node.js",
-    date: "Aug 10, 2025",
-    readTime: "12 min",
-    views: "1.5K",
-    excerpt:
-      "Discover how GraphQL simplifies data fetching and creates more flexible APIs for modern full-stack web development.",
-    tag: "Development",
-    tagColor: "blue",
-    image:
-      "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  },
-  {
-    id: 5,
-    title: "Mastering Tailwind CSS: Advanced Techniques",
-    date: "Jul 15, 2025",
-    readTime: "7 min",
-    views: "2.1K",
-    excerpt:
-      "Deep dive into advanced Tailwind CSS patterns, custom configurations, and performance optimization techniques.",
-    tag: "Web Development",
-    tagColor: "emerald",
-    image:
-      "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  },
-  {
-    id: 6,
-    title: "Color Theory for Modern Web Interfaces",
-    date: "Jul 2, 2025",
-    readTime: "5 min",
-    views: "1.6K",
-    excerpt:
-      "Understanding color psychology and implementing effective color schemes that enhance user experience.",
-    tag: "Design",
-    tagColor: "purple",
-    image:
-      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    trending: true,
   },
 ];
 
-const categories = ["All", "Web Development", "Design", "Performance", "Development"];
+const categories = [
+  "All",
+  "Web Development",
+  "Design",
+  "Performance",
+  "Development",
+];
 
 const categoryIcons = {
-  "All": Sparkles,
+  All: Sparkles,
   "Web Development": TrendingUp,
-  "Design": Tag,
-  "Performance": ArrowRight,
-  "Development": Clock,
+  Design: Tag,
+  Performance: ArrowRight,
+  Development: Clock,
 };
 
 export default function LatestArticlesGrid() {
   const [selected, setSelected] = useState("All");
 
   const filtered =
-    selected === "All" ? posts : posts.filter((p) => p.tag === selected);
+    selected === "All"
+      ? blogs
+      : blogs.filter((p) => p.tags && p.tags.includes(selected));
 
   return (
     <section className="relative py-32 bg-neutral-950 overflow-hidden">
@@ -140,11 +92,16 @@ export default function LatestArticlesGrid() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
             <Sparkles className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm font-medium text-emerald-400">Fresh Content</span>
+            <span className="text-sm font-medium text-emerald-400">
+              Fresh Content
+            </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Latest <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Articles</span>
+            Latest{" "}
+            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+              Articles
+            </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Insights, tutorials, and industry trends from the Truelyzer team.
@@ -162,7 +119,7 @@ export default function LatestArticlesGrid() {
           {categories.map((cat) => {
             const Icon = categoryIcons[cat] || Tag;
             const isSelected = selected === cat;
-            
+
             return (
               <motion.button
                 key={cat}
@@ -198,7 +155,11 @@ export default function LatestArticlesGrid() {
           className="text-center mb-8"
         >
           <p className="text-gray-500 text-sm">
-            Showing <span className="text-emerald-400 font-semibold">{filtered.length}</span> {filtered.length === 1 ? 'article' : 'articles'}
+            Showing{" "}
+            <span className="text-emerald-400 font-semibold">
+              {filtered.length}
+            </span>{" "}
+            {filtered.length === 1 ? "article" : "articles"}
           </p>
         </motion.div>
 
@@ -219,7 +180,9 @@ export default function LatestArticlesGrid() {
                 className="group relative"
               >
                 {/* Glow Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-r from-${post.tagColor}-500/10 to-${post.tagColor}-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r from-${post.tagColor}-500/10 to-${post.tagColor}-600/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                ></div>
 
                 {/* Card */}
                 <div className="relative h-full bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 rounded-3xl overflow-hidden hover:border-emerald-500/50 transition-all duration-500">
@@ -237,13 +200,19 @@ export default function LatestArticlesGrid() {
                     {post.trending && (
                       <div className="absolute top-4 left-4 px-3 py-1.5 bg-orange-500/90 backdrop-blur-sm rounded-full flex items-center gap-1.5">
                         <TrendingUp className="w-3.5 h-3.5 text-white" />
-                        <span className="text-xs font-bold text-white">Trending</span>
+                        <span className="text-xs font-bold text-white">
+                          Trending
+                        </span>
                       </div>
                     )}
 
                     {/* Category Badge */}
-                    <div className={`absolute top-4 right-4 px-3 py-1.5 bg-${post.tagColor}-500/20 backdrop-blur-sm border border-${post.tagColor}-500/30 rounded-full`}>
-                      <span className={`text-xs font-semibold text-${post.tagColor}-400`}>
+                    <div
+                      className={`absolute top-4 right-4 px-3 py-1.5 bg-${post.tagColor}-500/20 backdrop-blur-sm border border-${post.tagColor}-500/30 rounded-full`}
+                    >
+                      <span
+                        className={`text-xs font-semibold text-${post.tagColor}-400`}
+                      >
                         {post.tag}
                       </span>
                     </div>
@@ -251,7 +220,9 @@ export default function LatestArticlesGrid() {
                     {/* Views */}
                     <div className="absolute bottom-4 left-4 flex items-center gap-1.5 px-3 py-1.5 bg-neutral-900/80 backdrop-blur-sm rounded-full">
                       <Eye className="w-3.5 h-3.5 text-gray-400" />
-                      <span className="text-xs text-gray-400">{post.views}</span>
+                      <span className="text-xs text-gray-400">
+                        {post.views}
+                      </span>
                     </div>
                   </div>
 
@@ -265,7 +236,9 @@ export default function LatestArticlesGrid() {
                       </div>
                       <div className="flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5" />
-                        <span className="text-emerald-400">{post.readTime}</span>
+                        <span className="text-emerald-400">
+                          {post.readTime}
+                        </span>
                       </div>
                     </div>
 
@@ -281,7 +254,7 @@ export default function LatestArticlesGrid() {
 
                     {/* Read More Link */}
                     <Link
-                      href={`/blog/${post.id}`}
+                      href={`/blogs/${post.slug}`}
                       className="group/link inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold text-sm transition-colors"
                     >
                       Read Full Article
@@ -290,7 +263,9 @@ export default function LatestArticlesGrid() {
                   </div>
 
                   {/* Bottom Gradient Line */}
-                  <div className={`h-1 bg-gradient-to-r from-${post.tagColor}-500 to-${post.tagColor}-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                  <div
+                    className={`h-1 bg-gradient-to-r from-${post.tagColor}-500 to-${post.tagColor}-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  ></div>
                 </div>
               </motion.article>
             ))}

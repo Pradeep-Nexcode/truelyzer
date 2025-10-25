@@ -200,7 +200,7 @@
 
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { 
   ArrowLeft, 
@@ -222,12 +222,30 @@ import Link from "next/link";
 import { useState } from "react";
 import { blogs } from "@/data/blogs";
 
-const BlogPostPage = ({ post }) => {
+const BlogPostPage = () => {
   const router = useRouter();
+  const params = useParams();
   const [copied, setCopied] = useState(false);
 
-  // Example data (replace with dynamic props)
-  post =  blogs[0]
+  // Find the blog post that matches the slug from the URL
+  const post = blogs.find(blog => blog.slug === params.blog);
+
+  // If no matching blog post is found, show error or redirect
+  if (!post) {
+    return (
+      <div className="min-h-screen bg-neutral-950 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Blog Post Not Found</h1>
+          <button 
+            onClick={() => router.push('/blogs')}
+            className="text-emerald-400 hover:text-emerald-300"
+          >
+            Return to Blogs
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);

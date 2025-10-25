@@ -118,7 +118,7 @@ const FAQSection = () => {
             className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
             Everything you need to know about working with Truelyzer.
-            <span className="block mt-2 text-gray-500">Can't find your answer? We're here to help.</span>
+            <span className="block mt-2 text-gray-500">Can&apos;t find your answer? We&apos;re here to help.</span>
           </motion.p>
         </div>
 
@@ -257,7 +257,7 @@ const FAQSection = () => {
       <div className="sr-only">
         <h3>Truelyzer FAQ - Web Development Services in Coimbatore</h3>
         <p>
-          Frequently asked questions about Truelyzer's web development services, pricing, 
+          Frequently asked questions about Truelyzer&apos;s web development services, pricing, 
           timelines, SEO optimization, UI/UX design, post-launch support, and technical capabilities. 
           Learn about our React and Next.js development process, project duration, maintenance services, 
           and how we help businesses in Coimbatore and Tamil Nadu build high-performance websites.

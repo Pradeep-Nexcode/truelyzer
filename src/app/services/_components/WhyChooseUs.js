@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            We don't just build websites—we engineer digital experiences that drive real business results.
+            We don&apos;t just build websites—we engineer digital experiences that drive real business results.
             <span className="block mt-2 text-gray-500">Modern technology meets proven strategy.</span>
           </motion.p>
         </div>
@@ -163,8 +163,8 @@ const WhyChooseUs = () => {
                 Ready to Transform Your Digital Presence?
               </h3>
               <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-                Join 50+ successful businesses who've elevated their brands with Truelyzer. 
-                Let's build something extraordinary together.
+                Join 50+ successful businesses who&apos;ve elevated their brands with Truelyzer. 
+                Let&apos;s build something extraordinary together.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
