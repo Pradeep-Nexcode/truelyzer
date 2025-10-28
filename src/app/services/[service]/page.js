@@ -17,7 +17,7 @@ export default function Page({ params }) {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white">Service not found</h2>
           <p className="text-gray-400 mt-2">
-            We couldn't find the service "{service}".
+            We couldn&apos;t find the service &quot;{service}&quot;.
           </p>
           <div className="mt-6">
             <Link
