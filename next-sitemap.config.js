@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://www.truelyzer.com',
+  siteUrl: process.env.SITE_URL || 'https://www.trulyzer.com',
   generateRobotsTxt: true,
   changefreq: 'daily',
   priority: 0.7,
@@ -21,7 +21,7 @@ module.exports = {
 
   // ✅ Add dynamic routes for blogs and services
   additionalPaths: async (config) => {
-    const baseUrl = process.env.API_URL || 'https://api.truelyzer.com';
+    const baseUrl = process.env.API_URL || 'https://api.trulyzer.com';
 
     // Fetch dynamic blogs
     const blogRes = await fetch(`${baseUrl}/blogs`);
