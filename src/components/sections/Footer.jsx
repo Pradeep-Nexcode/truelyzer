@@ -162,7 +162,7 @@ const Footer = () => {
         {/* Contact Bar */}
         <div className="py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           <a 
-            href="tel:+918610737186"
+            href="tel:+918754043874"
             className="flex items-center gap-4 p-4 bg-neutral-900/50 border border-neutral-800 rounded-xl hover:border-emerald-500/50 transition-all duration-300 group"
           >
             <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500/20 transition-colors">
@@ -170,7 +170,7 @@ const Footer = () => {
             </div>
             <div className="min-w-0">
               <div className="text-xs text-gray-500 mb-1">Phone</div>
-              <div className="text-white text-sm font-medium">+91 86107 37186</div>
+              <div className="text-white text-sm font-medium">+91 87540 43874</div>
             </div>
           </a>
 

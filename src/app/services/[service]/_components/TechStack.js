@@ -1,5 +1,5 @@
 "use client";
-import services from '@/data/services'
+import services from "@/data/services";
 
 import { motion } from "framer-motion";
 import {
@@ -17,9 +17,9 @@ import {
   Settings,
 } from "lucide-react";
 
-const ServiceTechStack = () => {
-  const { heading, description, technologies, gradient, layout,bottomNote } =
-    services[0].techStack;
+const ServiceTechStack = ({ data, serviceId }) => {
+  const src = data || services.find((s) => s.id === serviceId) || services[0];
+  const { heading, description, technologies, gradient, layout, bottomNote } = src.techStack;
 
   // Dynamic grid columns based on number of items
   const getGridCols = () => {
@@ -187,7 +187,7 @@ const ServiceTechStack = () => {
         </motion.div>
 
         {/* Bottom Note (optional) */}
-        { bottomNote && (
+        {bottomNote && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +195,7 @@ const ServiceTechStack = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center mt-12"
           >
-            <p className="text-gray-500">{ bottomNote}</p>
+            <p className="text-gray-500">{bottomNote}</p>
           </motion.div>
         )}
       </div>

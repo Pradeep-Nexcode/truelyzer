@@ -1,26 +1,20 @@
-'use client'
+"use client";
 
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
-import { ChevronDown, HelpCircle, MessageCircle } from 'lucide-react'
-import Link from 'next/link'
-import services from '@/data/services'
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { ChevronDown, HelpCircle, MessageCircle } from "lucide-react";
+import Link from "next/link";
+import services from "@/data/services";
 
-const ServiceFAQ = ({ data }) => {
-  const {
-    heading,
-    description,
-    faqs,
-    gradient,
-    cta
-  } = services[1].faq
+const ServiceFAQ = ({ data, serviceId }) => {
+  const src = data || services.find((s) => s.id === serviceId) || services[0];
+  const { heading, description, faqs, gradient, cta } = src.faq;
 
-
-  const [openIndex, setOpenIndex] = useState(null)
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <section className="relative py-32 bg-neutral-950 px-6 overflow-hidden">
@@ -28,7 +22,9 @@ const ServiceFAQ = ({ data }) => {
       <div className="absolute inset-0">
         <motion.div
           className="absolute top-1/3 left-1/3 w-96 h-96 rounded-full blur-3xl"
-          style={{ backgroundColor: gradient?.primary || 'rgba(16,185,129,0.08)' }}
+          style={{
+            backgroundColor: gradient?.primary || "rgba(16,185,129,0.08)",
+          }}
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -51,8 +47,12 @@ const ServiceFAQ = ({ data }) => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20">
               <HelpCircle className="w-4 h-4 text-emerald-400" />
-              <span className={`text-sm font-semibold text-${gradient?.badge || 'emerald'}-400`}>
-                {heading.badge || 'FAQ'}
+              <span
+                className={`text-sm font-semibold text-${
+                  gradient?.badge || "emerald"
+                }-400`}
+              >
+                {heading.badge || "FAQ"}
               </span>
             </div>
           </motion.div>
@@ -66,7 +66,11 @@ const ServiceFAQ = ({ data }) => {
           >
             {heading.title}
             {heading.highlight && (
-              <span className={`block mt-2 bg-gradient-to-r ${gradient?.text || 'from-emerald-400 to-teal-400'} bg-clip-text text-transparent`}>
+              <span
+                className={`block mt-2 bg-gradient-to-r ${
+                  gradient?.text || "from-emerald-400 to-teal-400"
+                } bg-clip-text text-transparent`}
+              >
                 {heading.highlight}
               </span>
             )}
@@ -86,8 +90,8 @@ const ServiceFAQ = ({ data }) => {
         {/* FAQ List */}
         <div className="space-y-4 mb-12">
           {faqs.map((faq, index) => {
-            const isOpen = openIndex === index
-            const Icon = faq.icon || MessageCircle
+            const isOpen = openIndex === index;
+            const Icon = faq.icon || MessageCircle;
 
             return (
               <motion.div
@@ -99,18 +103,26 @@ const ServiceFAQ = ({ data }) => {
                 className="group relative"
               >
                 {/* Glow effect when open */}
-                <div 
-                  className={`absolute inset-0 bg-gradient-to-r ${gradient?.card || 'from-emerald-500/10 to-teal-500/10'} rounded-2xl blur-xl opacity-0 transition-opacity duration-500 ${
-                    isOpen ? 'opacity-20' : 'group-hover:opacity-10'
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${
+                    gradient?.card || "from-emerald-500/10 to-teal-500/10"
+                  } rounded-2xl blur-xl opacity-0 transition-opacity duration-500 ${
+                    isOpen ? "opacity-20" : "group-hover:opacity-10"
                   }`}
                 ></div>
 
                 {/* FAQ Card */}
                 <div
                   className={`relative bg-neutral-900/80 backdrop-blur-sm border rounded-2xl overflow-hidden transition-all duration-300 ${
-                    isOpen 
-                      ? `border-${gradient?.badge || 'emerald'}-500/50 shadow-lg shadow-${gradient?.badge || 'emerald'}-500/10` 
-                      : `border-neutral-800 hover:border-${gradient?.badge || 'emerald'}-500/30`
+                    isOpen
+                      ? `border-${
+                          gradient?.badge || "emerald"
+                        }-500/50 shadow-lg shadow-${
+                          gradient?.badge || "emerald"
+                        }-500/10`
+                      : `border-neutral-800 hover:border-${
+                          gradient?.badge || "emerald"
+                        }-500/30`
                   }`}
                 >
                   {/* Question Button */}
@@ -120,18 +132,26 @@ const ServiceFAQ = ({ data }) => {
                   >
                     {/* Icon */}
                     {faq.icon && (
-                      <div className={`flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br ${gradient?.icon || 'from-emerald-500 to-teal-600'} flex items-center justify-center shadow-lg transition-transform duration-300 ${
-                        isOpen ? 'scale-110' : 'group-hover:scale-105'
-                      }`}>
+                      <div
+                        className={`flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br ${
+                          gradient?.icon || "from-emerald-500 to-teal-600"
+                        } flex items-center justify-center shadow-lg transition-transform duration-300 ${
+                          isOpen ? "scale-110" : "group-hover:scale-105"
+                        }`}
+                      >
                         <Icon className="w-5 h-5 text-white" />
                       </div>
                     )}
 
                     {/* Question Text */}
                     <div className="flex-1">
-                      <h3 className={`text-lg md:text-xl font-semibold transition-colors ${
-                        isOpen ? `text-${gradient?.badge || 'emerald'}-400` : 'text-white group-hover:text-emerald-400'
-                      }`}>
+                      <h3
+                        className={`text-lg md:text-xl font-semibold transition-colors ${
+                          isOpen
+                            ? `text-${gradient?.badge || "emerald"}-400`
+                            : "text-white group-hover:text-emerald-400"
+                        }`}
+                      >
                         {faq.question}
                       </h3>
                     </div>
@@ -142,7 +162,11 @@ const ServiceFAQ = ({ data }) => {
                       transition={{ duration: 0.3 }}
                       className="flex-shrink-0"
                     >
-                      <ChevronDown className={`w-6 h-6 text-${gradient?.badge || 'emerald'}-400`} />
+                      <ChevronDown
+                        className={`w-6 h-6 text-${
+                          gradient?.badge || "emerald"
+                        }-400`}
+                      />
                     </motion.div>
                   </button>
 
@@ -156,15 +180,25 @@ const ServiceFAQ = ({ data }) => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className={`px-6 pb-6 ${faq.icon ? 'pl-[88px]' : ''}`}>
-                          <div className={`border-l-2 border-${gradient?.badge || 'emerald'}-500/30 pl-6`}>
+                        <div
+                          className={`px-6 pb-6 ${faq.icon ? "pl-[88px]" : ""}`}
+                        >
+                          <div
+                            className={`border-l-2 border-${
+                              gradient?.badge || "emerald"
+                            }-500/30 pl-6`}
+                          >
                             <p className="text-gray-400 leading-relaxed">
                               {faq.answer}
                             </p>
                             {faq.link && (
                               <Link
                                 href={faq.link.url}
-                                className={`inline-flex items-center gap-2 mt-4 text-${gradient?.badge || 'emerald'}-400 hover:text-${gradient?.badge || 'emerald'}-300 transition-colors text-sm font-medium`}
+                                className={`inline-flex items-center gap-2 mt-4 text-${
+                                  gradient?.badge || "emerald"
+                                }-400 hover:text-${
+                                  gradient?.badge || "emerald"
+                                }-300 transition-colors text-sm font-medium`}
                               >
                                 {faq.link.text}
                                 <ChevronDown className="w-4 h-4 -rotate-90" />
@@ -181,12 +215,14 @@ const ServiceFAQ = ({ data }) => {
                     <motion.div
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
-                      className={`h-1 bg-gradient-to-r ${gradient?.bottomBar || 'from-emerald-500 to-teal-600'}`}
+                      className={`h-1 bg-gradient-to-r ${
+                        gradient?.bottomBar || "from-emerald-500 to-teal-600"
+                      }`}
                     />
                   )}
                 </div>
               </motion.div>
-            )
+            );
           })}
         </div>
 
@@ -200,26 +236,53 @@ const ServiceFAQ = ({ data }) => {
             className="text-center"
           >
             <div className="relative inline-block">
-              <div className={`absolute inset-0 bg-gradient-to-r ${gradient?.card || 'from-emerald-500/10 to-teal-500/10'} rounded-2xl blur-xl opacity-30`}></div>
-              <div className={`relative bg-gradient-to-r ${gradient?.card || 'from-emerald-500/10 to-teal-500/10'} border border-${gradient?.badge || 'emerald'}-500/20 rounded-2xl p-8 backdrop-blur-sm`}>
-                <MessageCircle className={`w-8 h-8 text-${gradient?.badge || 'emerald'}-400 mx-auto mb-4`} />
+              <div
+                className={`absolute inset-0 bg-gradient-to-r ${
+                  gradient?.card || "from-emerald-500/10 to-teal-500/10"
+                } rounded-2xl blur-xl opacity-30`}
+              ></div>
+              <div
+                className={`relative bg-gradient-to-r ${
+                  gradient?.card || "from-emerald-500/10 to-teal-500/10"
+                } border border-${
+                  gradient?.badge || "emerald"
+                }-500/20 rounded-2xl p-8 backdrop-blur-sm`}
+              >
+                <MessageCircle
+                  className={`w-8 h-8 text-${
+                    gradient?.badge || "emerald"
+                  }-400 mx-auto mb-4`}
+                />
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  {cta.title || 'Still Have Questions?'}
+                  {cta.title || "Still Have Questions?"}
                 </h3>
                 <p className="text-gray-400 mb-6 max-w-md mx-auto">
-                  {cta.description || "Our team is ready to help. Get in touch for a free consultation."}
+                  {cta.description ||
+                    "Our team is ready to help. Get in touch for a free consultation."}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
-                    href={cta.primaryLink || '/contact'}
-                    className={`px-8 py-4 bg-${gradient?.badge || 'emerald'}-500 text-white font-semibold rounded-full hover:bg-${gradient?.badge || 'emerald'}-600 transition-all hover:scale-105 shadow-lg shadow-${gradient?.badge || 'emerald'}-500/30`}
+                    href={cta.primaryLink || "/contact"}
+                    className={`px-8 py-4 bg-${
+                      gradient?.badge || "emerald"
+                    }-500 text-white font-semibold rounded-full hover:bg-${
+                      gradient?.badge || "emerald"
+                    }-600 transition-all hover:scale-105 shadow-lg shadow-${
+                      gradient?.badge || "emerald"
+                    }-500/30`}
                   >
-                    {cta.primaryText || 'Contact Us'}
+                    {cta.primaryText || "Contact Us"}
                   </Link>
                   {cta.secondaryText && (
                     <Link
-                      href={cta.secondaryLink || '#'}
-                      className={`px-8 py-4 border-2 border-${gradient?.badge || 'emerald'}-500/30 text-${gradient?.badge || 'emerald'}-400 font-semibold rounded-full hover:bg-${gradient?.badge || 'emerald'}-500/10 transition-all`}
+                      href={cta.secondaryLink || "#"}
+                      className={`px-8 py-4 border-2 border-${
+                        gradient?.badge || "emerald"
+                      }-500/30 text-${
+                        gradient?.badge || "emerald"
+                      }-400 font-semibold rounded-full hover:bg-${
+                        gradient?.badge || "emerald"
+                      }-500/10 transition-all`}
                     >
                       {cta.secondaryText}
                     </Link>
@@ -231,7 +294,7 @@ const ServiceFAQ = ({ data }) => {
         )}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServiceFAQ 
+export default ServiceFAQ;

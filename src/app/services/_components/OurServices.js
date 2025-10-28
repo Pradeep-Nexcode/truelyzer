@@ -34,7 +34,7 @@ const services = [
     icon: Megaphone,
     title: "SEO & Digital Strategy",
     desc: "Maximize visibility and conversions through data-driven SEO and marketing solutions.",
-    href: "/services/seo-optimization",
+    href: "/services/seo-digital-marketing",
     gradient: "from-blue-500 to-cyan-600",
     features: ["Technical SEO", "Content", "Analytics"]
   },

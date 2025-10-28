@@ -14,13 +14,20 @@ import {
   Code,
   Headphones,
   DollarSign,
-  FileText
+  FileText,
 } from "lucide-react";
-import { ArrowRight, ExternalLink, TrendingUp, Clock, Award } from 'lucide-react'
-import { ChevronDown, HelpCircle, MessageCircle } from 'lucide-react'
+import {
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Award,
+} from "lucide-react";
+import { ChevronDown, HelpCircle, MessageCircle } from "lucide-react";
 
 const services = [
   {
+    id: "web-development",
     title: "Web Development",
     titleHighlight: "Services",
     subtitle: "Build Your Digital Future",
@@ -229,60 +236,67 @@ const services = [
     },
     faq: {
       heading: {
-    badge: "Got Questions?",
-    title: "Frequently Asked",
-    highlight: "Questions"
-  },
-  description: "Answers to common questions about our web development services. We aim to make your project smooth and transparent.",
-  faqs: [
-    {
-      question: "How long does a typical web development project take?",
-      answer: "Most projects take between 4 to 12 weeks depending on the complexity and requirements. We provide detailed timelines during our initial consultation and keep you updated at every milestone.",
-      icon: Clock,
-      link: {
-        text: "View our process",
-        url: "/process"
-      }
+        badge: "Got Questions?",
+        title: "Frequently Asked",
+        highlight: "Questions",
+      },
+      description:
+        "Answers to common questions about our web development services. We aim to make your project smooth and transparent.",
+      faqs: [
+        {
+          question: "How long does a typical web development project take?",
+          answer:
+            "Most projects take between 4 to 12 weeks depending on the complexity and requirements. We provide detailed timelines during our initial consultation and keep you updated at every milestone.",
+          icon: Clock,
+          link: {
+            text: "View our process",
+            url: "/process",
+          },
+        },
+        {
+          question: "What technologies do you use for web development?",
+          answer:
+            "We primarily use React, Next.js, Node.js, GraphQL, Tailwind CSS, and other modern web technologies to build fast and scalable applications. Our tech stack is chosen based on your project requirements.",
+          icon: Code,
+        },
+        {
+          question: "Do you provide ongoing support after the project?",
+          answer:
+            "Yes! We offer post-launch support and maintenance packages to keep your website updated and secure. This includes bug fixes, performance monitoring, content updates, and feature enhancements.",
+          icon: Headphones,
+        },
+        {
+          question: "What is the cost of a web development project?",
+          answer:
+            "Project costs vary based on complexity, features, and timeline. Simple websites start at ₹25,000, while complex web applications are custom quoted. We provide transparent estimates with no hidden fees.",
+          icon: DollarSign,
+          link: {
+            text: "Get a free quote",
+            url: "/contact",
+          },
+        },
+      ],
+      cta: {
+        title: "Still Have Questions?",
+        description:
+          "Our team is ready to help. Schedule a free 30-minute consultation to discuss your project.",
+        primaryText: "Book Free Consultation",
+        primaryLink: "/contact",
+        secondaryText: "View Portfolio",
+        secondaryLink: "/portfolio",
+      },
+      gradient: {
+        primary: "rgba(16,185,129,0.08)",
+        badge: "emerald",
+        text: "from-emerald-400 to-teal-400",
+        card: "from-emerald-500/10 to-teal-500/10",
+        icon: "from-emerald-500 to-teal-600",
+        bottomBar: "from-emerald-500 to-teal-600",
+      },
     },
-    {
-      question: "What technologies do you use for web development?",
-      answer: "We primarily use React, Next.js, Node.js, GraphQL, Tailwind CSS, and other modern web technologies to build fast and scalable applications. Our tech stack is chosen based on your project requirements.",
-      icon: Code
-    },
-    {
-      question: "Do you provide ongoing support after the project?",
-      answer: "Yes! We offer post-launch support and maintenance packages to keep your website updated and secure. This includes bug fixes, performance monitoring, content updates, and feature enhancements.",
-      icon: Headphones
-    },
-    {
-      question: "What is the cost of a web development project?",
-      answer: "Project costs vary based on complexity, features, and timeline. Simple websites start at ₹25,000, while complex web applications are custom quoted. We provide transparent estimates with no hidden fees.",
-      icon: DollarSign,
-      link: {
-        text: "Get a free quote",
-        url: "/contact"
-      }
-    }
-  ],
-  cta: {
-    title: "Still Have Questions?",
-    description: "Our team is ready to help. Schedule a free 30-minute consultation to discuss your project.",
-    primaryText: "Book Free Consultation",
-    primaryLink: "/contact",
-    secondaryText: "View Portfolio",
-    secondaryLink: "/portfolio"
-  },
-  gradient: {
-    primary: "rgba(16,185,129,0.08)",
-    badge: "emerald",
-    text: "from-emerald-400 to-teal-400",
-    card: "from-emerald-500/10 to-teal-500/10",
-    icon: "from-emerald-500 to-teal-600",
-    bottomBar: "from-emerald-500 to-teal-600"
-  }
-    }
   },
   {
+    id: "ui-ux-design",
     title: "UI/UX Design",
     titleHighlight: "Services",
     subtitle: "Design That Converts",
@@ -484,52 +498,59 @@ const services = [
     },
     faq: {
       heading: {
-    badge: "Design FAQ",
-    title: "Common Questions About",
-    highlight: "Our Design Process"
-  },
-  description: "Everything you need to know about working with our design team. Clear answers, no confusion.",
-  faqs: [
-    {
-      question: "What deliverables do I get with a UI/UX design project?",
-      answer: "You'll receive complete Figma files with wireframes, high-fidelity designs, interactive prototypes, design system/component library, and exported assets ready for development.",
-      icon: FileText
+        badge: "Design FAQ",
+        title: "Common Questions About",
+        highlight: "Our Design Process",
+      },
+      description:
+        "Everything you need to know about working with our design team. Clear answers, no confusion.",
+      faqs: [
+        {
+          question: "What deliverables do I get with a UI/UX design project?",
+          answer:
+            "You'll receive complete Figma files with wireframes, high-fidelity designs, interactive prototypes, design system/component library, and exported assets ready for development.",
+          icon: FileText,
+        },
+        {
+          question: "How long does a design project typically take?",
+          answer:
+            "Design projects usually take 2-6 weeks depending on scope. This includes research, wireframing, design iterations, and final prototype. We work in sprints with regular check-ins.",
+          icon: Clock,
+        },
+        {
+          question: "Do you conduct user research?",
+          answer:
+            "Yes! We offer user research, competitive analysis, user testing, and data-driven design decisions. This ensures our designs are not just beautiful, but also effective.",
+          icon: Palette,
+        },
+        {
+          question: "What's the cost of a UI/UX design project?",
+          answer:
+            "Design projects start at ₹35,000 for landing pages and ₹1,50,000+ for complete app designs. Final pricing depends on complexity, number of screens, and research requirements.",
+          icon: DollarSign,
+        },
+      ],
+      cta: {
+        title: "Ready to Start Your Design Project?",
+        description:
+          "Let's create something beautiful together. Get a free design consultation.",
+        primaryText: "Schedule Design Call",
+        primaryLink: "/contact",
+        secondaryText: "See Our Work",
+        secondaryLink: "/portfolio",
+      },
+      gradient: {
+        primary: "rgba(168,85,247,0.08)",
+        badge: "purple",
+        text: "from-purple-400 to-pink-600",
+        card: "from-purple-500/10 to-pink-500/10",
+        icon: "from-purple-500 to-pink-600",
+        bottomBar: "from-purple-500 to-pink-600",
+      },
     },
-    {
-      question: "How long does a design project typically take?",
-      answer: "Design projects usually take 2-6 weeks depending on scope. This includes research, wireframing, design iterations, and final prototype. We work in sprints with regular check-ins.",
-      icon: Clock
-    },
-    {
-      question: "Do you conduct user research?",
-      answer: "Yes! We offer user research, competitive analysis, user testing, and data-driven design decisions. This ensures our designs are not just beautiful, but also effective.",
-      icon: Palette
-    },
-    {
-      question: "What's the cost of a UI/UX design project?",
-      answer: "Design projects start at ₹35,000 for landing pages and ₹1,50,000+ for complete app designs. Final pricing depends on complexity, number of screens, and research requirements.",
-      icon: DollarSign
-    }
-  ],
-  cta: {
-    title: "Ready to Start Your Design Project?",
-    description: "Let's create something beautiful together. Get a free design consultation.",
-    primaryText: "Schedule Design Call",
-    primaryLink: "/contact",
-    secondaryText: "See Our Work",
-    secondaryLink: "/portfolio"
-  },
-  gradient: {
-    primary: "rgba(168,85,247,0.08)",
-    badge: "purple",
-    text: "from-purple-400 to-pink-600",
-    card: "from-purple-500/10 to-pink-500/10",
-    icon: "from-purple-500 to-pink-600",
-    bottomBar: "from-purple-500 to-pink-600"
-  }
-    }
   },
   {
+    id: "seo-digital-marketing",
     title: "SEO & Digital Marketing",
     titleHighlight: "Services",
     subtitle: "Rank Higher, Grow Faster",
@@ -733,7 +754,812 @@ const services = [
         "Monthly reports include data from all major SEO platforms and analytics tools.",
     },
   },
-];
+  // Add these three objects to your existing services array
 
+  {
+    id: "performance-optimization",
+    title: "Performance Optimization",
+    titleHighlight: "Services",
+    subtitle: "Lightning-Fast Web Performance",
+    description:
+      "Supercharge your website with cutting-edge performance optimization techniques that deliver blazing-fast load times and exceptional user experiences.",
+    ctaText: "Optimize My Site ⚡",
+    ctaLink: "/contact",
+    secondaryCta: {
+      text: "Free Speed Audit",
+      link: "/speed-audit",
+    },
+    badge: {
+      icon: "⚡",
+      text: "Performance Experts",
+    },
+    features: [
+      "Core Web Vitals",
+      "Speed Optimization",
+      "CDN Setup",
+      "Image Optimization",
+    ],
+    stats: [
+      { number: "<2s", label: "Average Load Time" },
+      { number: "95+", label: "PageSpeed Score" },
+      { number: "70%", label: "Speed Improvement" },
+    ],
+    gradient: {
+      primary: "rgba(249,115,22,0.08)",
+      accent: "#fb923c",
+      badge: "orange",
+      badgeShadow: "rgba(249,115,22,0.5)",
+      text: "from-orange-400 to-red-600",
+    },
+    seo: {
+      title: "Website Performance Optimization Services | Truelyzer Coimbatore",
+      description:
+        "Expert performance optimization services to speed up your website. Core Web Vitals, CDN setup, image optimization in Tamil Nadu.",
+      keywords:
+        "performance optimization, website speed, Core Web Vitals, CDN, page speed",
+    },
+    overview: {
+      heading: {
+        badge: "Speed Matters",
+        title: "Accelerate Your",
+        highlight: "Website Performance",
+      },
+      description:
+        "Every millisecond counts. We optimize your website to load faster, rank higher, and convert better. Our performance-first approach ensures your users get the best experience across all devices and connections.",
+      highlights: [
+        {
+          icon: "⚡",
+          title: "Core Web Vitals Optimization",
+          description:
+            "Fine-tune LCP, FID, and CLS to meet Google's performance standards and improve search rankings.",
+        },
+        {
+          icon: "🖼️",
+          title: "Advanced Image Optimization",
+          description:
+            "WebP/AVIF conversion, lazy loading, responsive images, and CDN delivery for faster page loads.",
+        },
+        {
+          icon: "📦",
+          title: "Code Splitting & Bundling",
+          description:
+            "Optimize JavaScript and CSS delivery with code splitting, tree shaking, and intelligent bundling.",
+        },
+        {
+          icon: "🌐",
+          title: "CDN & Caching Strategy",
+          description:
+            "Global content delivery networks and smart caching configurations for lightning-fast worldwide access.",
+        },
+      ],
+      gradient: {
+        primary: "rgba(249,115,22,0.1)",
+        secondary: "rgba(239,68,68,0.1)",
+        badge: "orange",
+        text: "from-orange-400 to-red-600",
+        card: "from-orange-500/10 to-red-500/10",
+        icon: "from-orange-500 to-red-600",
+      },
+    },
+    caseStudies: {
+      heading: {
+        badge: "Speed Wins",
+        title: "Performance Results",
+        highlight: "That Drive Growth",
+      },
+      description:
+        "See how our performance optimization strategies have transformed slow websites into lightning-fast experiences that boost conversions and rankings.",
+      showStats: true,
+      projects: [
+        {
+          title: "E-commerce Speed Boost",
+          description:
+            "Reduced load time from 8.5s to 1.2s, resulting in 45% increase in conversions and 60% reduction in bounce rate.",
+          icon: "🛒",
+          category: "E-commerce",
+          link: "/portfolio/ecommerce-speed",
+          tags: ["Image Opt", "CDN", "Code Split"],
+          stats: [
+            { icon: Clock, value: "1.2s", label: "Load Time" },
+            { icon: TrendingUp, value: "45%", label: "Conversions Up" },
+          ],
+        },
+        {
+          title: "News Portal Optimization",
+          description:
+            "Achieved 98 PageSpeed score and improved Core Web Vitals, increasing ad revenue by 35% through better user engagement.",
+          icon: "📰",
+          category: "Media",
+          link: "/portfolio/news-portal",
+          tags: ["Web Vitals", "Lazy Load", "Cache"],
+          stats: [
+            { icon: Award, value: "98", label: "PageSpeed Score" },
+            { icon: TrendingUp, value: "35%", label: "Revenue Increase" },
+          ],
+        },
+        {
+          title: "SaaS Dashboard Performance",
+          description:
+            "Optimized React application bundle size by 60% and improved Time to Interactive by 4 seconds for better UX.",
+          icon: "📊",
+          category: "SaaS",
+          link: "/portfolio/saas-performance",
+          tags: ["Bundle Size", "React", "TTI"],
+          stats: [
+            { icon: TrendingUp, value: "60%", label: "Bundle Reduced" },
+            { icon: Clock, value: "4s", label: "TTI Improved" },
+          ],
+        },
+      ],
+      cta: {
+        text: "Optimize Your Website",
+        link: "/contact",
+      },
+      gradient: {
+        primary: "rgba(249,115,22,0.08)",
+        badge: "orange",
+        text: "from-orange-400 to-red-600",
+        card: "from-orange-500/10 to-red-500/10",
+        imagePlaceholder: "from-orange-500/20 to-red-500/20",
+      },
+    },
+    techStack: {
+      heading: {
+        badge: "Performance Tools",
+        title: "Advanced Optimization",
+        highlight: "Tools & Technologies",
+      },
+      description:
+        "We leverage industry-leading performance tools and monitoring platforms to identify bottlenecks, optimize delivery, and ensure your website runs at peak performance.",
+      technologies: [
+        {
+          name: "Lighthouse",
+          emoji: "🏮",
+          color: "#F44B21",
+          colorAlt: "#FF6347",
+          description: "Performance Audits",
+        },
+        {
+          name: "GTmetrix",
+          emoji: "📈",
+          color: "#1E88E5",
+          colorAlt: "#42A5F5",
+          description: "Speed Analysis",
+        },
+        {
+          name: "Cloudflare",
+          emoji: "☁️",
+          color: "#F38020",
+          colorAlt: "#FF9645",
+          description: "CDN & Security",
+        },
+        {
+          name: "WebPageTest",
+          emoji: "⚡",
+          color: "#005A9C",
+          colorAlt: "#0074C8",
+          description: "Real-World Testing",
+        },
+        {
+          name: "Vercel",
+          emoji: "▲",
+          color: "#000000",
+          colorAlt: "#404040",
+          description: "Edge Deployment",
+        },
+        {
+          name: "ImageOptim",
+          emoji: "🖼️",
+          color: "#4CAF50",
+          colorAlt: "#66BB6A",
+          description: "Image Compression",
+        },
+      ],
+      gradient: {
+        primary: "rgba(249,115,22,0.08)",
+        badge: "orange",
+        text: "from-orange-400 to-red-600",
+      },
+      bottomNote:
+        "All optimizations include before/after reports with measurable performance metrics.",
+    },
+    faq: {
+      heading: {
+        badge: "Performance FAQ",
+        title: "Questions About",
+        highlight: "Website Speed",
+      },
+      description:
+        "Common questions about website performance optimization and how we can make your site faster.",
+      faqs: [
+        {
+          question: "Why is website speed important?",
+          answer:
+            "Website speed directly impacts user experience, SEO rankings, and conversions. Studies show a 1-second delay can reduce conversions by 7%. Google also uses Core Web Vitals as a ranking factor.",
+          icon: TrendingUp,
+        },
+        {
+          question: "How long does performance optimization take?",
+          answer:
+            "Most optimization projects take 1-3 weeks depending on your site's complexity. We provide quick wins in the first week and continue with deeper optimizations thereafter.",
+          icon: Clock,
+        },
+        {
+          question: "What is Core Web Vitals and why does it matter?",
+          answer:
+            "Core Web Vitals are Google's metrics for page experience: LCP (loading), FID (interactivity), and CLS (visual stability). Meeting these standards improves SEO and user satisfaction.",
+          icon: Award,
+          link: {
+            text: "Learn more about Core Web Vitals",
+            url: "https://web.dev/vitals/",
+          },
+        },
+        {
+          question: "How much does performance optimization cost?",
+          answer:
+            "Performance optimization starts at ₹15,000 for basic speed improvements and ₹50,000+ for comprehensive optimization including CDN, image optimization, and ongoing monitoring.",
+          icon: DollarSign,
+          link: {
+            text: "Get a free speed audit",
+            url: "/contact",
+          },
+        },
+      ],
+      cta: {
+        title: "Ready to Speed Up Your Website?",
+        description:
+          "Get a free performance audit and discover how fast your site could be.",
+        primaryText: "Get Free Speed Audit",
+        primaryLink: "/contact",
+        secondaryText: "See Performance Case Studies",
+        secondaryLink: "/portfolio",
+      },
+      gradient: {
+        primary: "rgba(249,115,22,0.08)",
+        badge: "orange",
+        text: "from-orange-400 to-red-600",
+        card: "from-orange-500/10 to-red-500/10",
+        icon: "from-orange-500 to-red-600",
+        bottomBar: "from-orange-500 to-red-600",
+      },
+    },
+  },
+  {
+    id: "automation",
+    title: "Automation & Integrations",
+    titleHighlight: "Services",
+    subtitle: "Automate. Integrate. Scale.",
+    description:
+      "Streamline your business workflows with intelligent automation, API integrations, and AI-powered solutions that save time and boost productivity.",
+    ctaText: "Automate Now 🤖",
+    ctaLink: "/contact",
+    secondaryCta: {
+      text: "View Automation Examples",
+      link: "/portfolio",
+    },
+    badge: {
+      icon: "🤖",
+      text: "Automation Specialists",
+    },
+    features: [
+      "API Integrations",
+      "Workflow Automation",
+      "AI Solutions",
+      "Custom Bots",
+    ],
+    stats: [
+      { number: "80%", label: "Time Saved" },
+      { number: "100+", label: "APIs Integrated" },
+      { number: "24/7", label: "Automation Running" },
+    ],
+    gradient: {
+      primary: "rgba(234,179,8,0.08)",
+      accent: "#fbbf24",
+      badge: "yellow",
+      badgeShadow: "rgba(234,179,8,0.5)",
+      text: "from-yellow-400 to-orange-600",
+    },
+    seo: {
+      title: "Automation & API Integration Services | Truelyzer Coimbatore",
+      description:
+        "Professional automation services using APIs, webhooks, and AI. Streamline workflows and boost productivity in Tamil Nadu.",
+      keywords:
+        "automation, API integration, workflow automation, AI solutions, webhooks",
+    },
+    overview: {
+      heading: {
+        badge: "Smart Automation",
+        title: "Streamline Everything",
+        highlight: "With Intelligent Systems",
+      },
+      description:
+        "Stop wasting time on repetitive tasks. We build custom automation solutions that connect your tools, streamline processes, and let you focus on growing your business. From simple webhooks to complex AI integrations.",
+      highlights: [
+        {
+          icon: "🔗",
+          title: "API Integrations",
+          description:
+            "Connect any platform—CRM, payment gateways, analytics, marketing tools—for seamless data flow.",
+        },
+        {
+          icon: "⚙️",
+          title: "Workflow Automation",
+          description:
+            "Automate repetitive tasks using Zapier, Make, n8n, or custom solutions tailored to your needs.",
+        },
+        {
+          icon: "🤖",
+          title: "AI-Powered Solutions",
+          description:
+            "Integrate ChatGPT, Claude, or custom AI models for intelligent chatbots, content generation, and data analysis.",
+        },
+        {
+          icon: "📨",
+          title: "Email & Notification Systems",
+          description:
+            "Automated email sequences, SMS notifications, and real-time alerts triggered by user actions.",
+        },
+      ],
+      gradient: {
+        primary: "rgba(234,179,8,0.1)",
+        secondary: "rgba(249,115,22,0.1)",
+        badge: "yellow",
+        text: "from-yellow-400 to-orange-600",
+        card: "from-yellow-500/10 to-orange-500/10",
+        icon: "from-yellow-500 to-orange-600",
+      },
+    },
+    caseStudies: {
+      heading: {
+        badge: "Automation Success",
+        title: "Real Workflows",
+        highlight: "We've Automated",
+      },
+      description:
+        "See how our automation solutions have helped businesses save time, reduce errors, and scale operations without increasing headcount.",
+      showStats: true,
+      projects: [
+        {
+          title: "CRM + Email Automation",
+          description:
+            "Built automated lead nurturing system connecting CRM, email marketing, and analytics for a B2B agency, saving 20 hours weekly.",
+          icon: "📧",
+          category: "Marketing Automation",
+          link: "/portfolio/crm-automation",
+          tags: ["Zapier", "API", "Email"],
+          stats: [
+            { icon: Clock, value: "20hrs", label: "Weekly Time Saved" },
+            { icon: TrendingUp, value: "150%", label: "Lead Conversion" },
+          ],
+        },
+        {
+          title: "AI Customer Support Bot",
+          description:
+            "Developed intelligent chatbot using GPT-4 that handles 70% of customer queries automatically, reducing support costs by 60%.",
+          icon: "💬",
+          category: "AI Integration",
+          link: "/portfolio/ai-chatbot",
+          tags: ["ChatGPT", "API", "Webhook"],
+          stats: [
+            { icon: Award, value: "70%", label: "Queries Automated" },
+            { icon: TrendingUp, value: "60%", label: "Cost Reduction" },
+          ],
+        },
+        {
+          title: "E-commerce Order Sync",
+          description:
+            "Automated order processing connecting Shopify, inventory system, shipping, and accounting software for seamless operations.",
+          icon: "📦",
+          category: "E-commerce Automation",
+          link: "/portfolio/ecommerce-sync",
+          tags: ["Shopify", "Webhooks", "API"],
+          stats: [
+            { icon: Clock, value: "99%", label: "Error Reduction" },
+            { icon: TrendingUp, value: "5x", label: "Order Processing" },
+          ],
+        },
+      ],
+      cta: {
+        text: "Discuss Your Automation Needs",
+        link: "/contact",
+      },
+      gradient: {
+        primary: "rgba(234,179,8,0.08)",
+        badge: "yellow",
+        text: "from-yellow-400 to-orange-600",
+        card: "from-yellow-500/10 to-orange-500/10",
+        imagePlaceholder: "from-yellow-500/20 to-orange-500/20",
+      },
+    },
+    techStack: {
+      heading: {
+        badge: "Automation Stack",
+        title: "Tools & Platforms",
+        highlight: "We Work With",
+      },
+      description:
+        "We leverage powerful automation platforms and AI technologies to build custom solutions that integrate seamlessly with your existing tools.",
+      technologies: [
+        {
+          name: "Zapier",
+          emoji: "⚡",
+          color: "#FF4A00",
+          colorAlt: "#FF6B35",
+          description: "Workflow Automation",
+        },
+        {
+          name: "Make (Integromat)",
+          emoji: "🔧",
+          color: "#6B47DC",
+          colorAlt: "#8561E6",
+          description: "Advanced Automation",
+        },
+        {
+          name: "n8n",
+          emoji: "🔗",
+          color: "#EA4B71",
+          colorAlt: "#FF6B8A",
+          description: "Open-Source Workflows",
+        },
+        {
+          name: "OpenAI API",
+          emoji: "🤖",
+          color: "#10A37F",
+          colorAlt: "#2DC99B",
+          description: "AI Integration",
+        },
+        {
+          name: "Webhook.site",
+          emoji: "📨",
+          color: "#0066CC",
+          colorAlt: "#3385DB",
+          description: "Webhook Testing",
+        },
+        {
+          name: "Postman",
+          emoji: "📮",
+          color: "#FF6C37",
+          colorAlt: "#FF8557",
+          description: "API Development",
+        },
+      ],
+      gradient: {
+        primary: "rgba(234,179,8,0.08)",
+        badge: "yellow",
+        text: "from-yellow-400 to-orange-600",
+      },
+      bottomNote:
+        "All integrations are fully documented with error handling and monitoring systems.",
+    },
+    faq: {
+      heading: {
+        badge: "Automation FAQ",
+        title: "Questions About",
+        highlight: "Automation & Integration",
+      },
+      description:
+        "Everything you need to know about automating your business processes and integrating your tools.",
+      faqs: [
+        {
+          question: "What can be automated in my business?",
+          answer:
+            "Almost anything repetitive: lead capture, email follow-ups, data entry, invoice generation, social media posting, customer onboarding, reporting, and much more. We'll audit your workflows and identify automation opportunities.",
+          icon: Settings,
+        },
+        {
+          question: "How long does it take to build an automation?",
+          answer:
+            "Simple automations (2-3 tool integrations) take 1-2 weeks. Complex workflows with multiple platforms and custom logic take 3-6 weeks. Most clients see ROI within the first month.",
+          icon: Clock,
+        },
+        {
+          question: "Do you provide training and documentation?",
+          answer:
+            "Yes! Every automation includes complete documentation, video walkthrough, and optional training sessions. We ensure your team can manage and troubleshoot the automation independently.",
+          icon: FileText,
+          link: {
+            text: "View sample documentation",
+            url: "/portfolio",
+          },
+        },
+        {
+          question: "What's the cost of automation services?",
+          answer:
+            "Pricing varies based on complexity. Simple Zapier workflows start at ₹10,000. Custom API integrations and AI chatbots range from ₹50,000 to ₹2,00,000+. We provide clear estimates after understanding your needs.",
+          icon: DollarSign,
+          link: {
+            text: "Schedule automation consultation",
+            url: "/contact",
+          },
+        },
+      ],
+      cta: {
+        title: "Ready to Automate Your Workflow?",
+        description:
+          "Let's identify repetitive tasks and build automation that saves you time and money.",
+        primaryText: "Book Free Automation Audit",
+        primaryLink: "/contact",
+        secondaryText: "See Automation Examples",
+        secondaryLink: "/portfolio",
+      },
+      gradient: {
+        primary: "rgba(234,179,8,0.08)",
+        badge: "yellow",
+        text: "from-yellow-400 to-orange-600",
+        card: "from-yellow-500/10 to-orange-500/10",
+        icon: "from-yellow-500 to-orange-600",
+        bottomBar: "from-yellow-500 to-orange-600",
+      },
+    },
+  },
+  {
+    id: "maintenance",
+    title: "Maintenance & Support",
+    titleHighlight: "Services",
+    subtitle: "Always Online, Always Secure",
+    description:
+      "Comprehensive website maintenance and technical support to keep your digital assets running smoothly, securely, and at peak performance 24/7.",
+    ctaText: "Get Support Plan 🛡️",
+    ctaLink: "/contact",
+    secondaryCta: {
+      text: "Compare Plans",
+      link: "/maintenance-plans",
+    },
+    badge: {
+      icon: "🛡️",
+      text: "Trusted Support Partner",
+    },
+    features: [
+      "24/7 Monitoring",
+      "Security Updates",
+      "Backup & Recovery",
+      "Priority Support",
+    ],
+    stats: [
+      { number: "99.9%", label: "Uptime Guarantee" },
+      { number: "<2hr", label: "Response Time" },
+      { number: "200+", label: "Sites Maintained" },
+    ],
+    gradient: {
+      primary: "rgba(34,197,94,0.08)",
+      accent: "#4ade80",
+      badge: "green",
+      badgeShadow: "rgba(34,197,94,0.5)",
+      text: "from-green-400 to-emerald-600",
+    },
+    seo: {
+      title: "Website Maintenance & Support Services | Truelyzer Coimbatore",
+      description:
+        "Professional website maintenance, security updates, backup, and 24/7 support services in Tamil Nadu. Keep your site secure and running smoothly.",
+      keywords:
+        "website maintenance, technical support, security updates, backup, monitoring",
+    },
+    overview: {
+      heading: {
+        badge: "Reliable Support",
+        title: "Keep Your Site",
+        highlight: "Secure & Updated",
+      },
+      description:
+        "Your website needs constant care to stay secure, fast, and functional. Our maintenance plans provide proactive monitoring, regular updates, security patches, and expert support so you can focus on your business worry-free.",
+      highlights: [
+        {
+          icon: "🔒",
+          title: "Security & Updates",
+          description:
+            "Regular security patches, plugin updates, malware scanning, and SSL certificate management to protect your site.",
+        },
+        {
+          icon: "💾",
+          title: "Automated Backups",
+          description:
+            "Daily automated backups with one-click restore capability. Your data is safe and recoverable anytime.",
+        },
+        {
+          icon: "📊",
+          title: "Performance Monitoring",
+          description:
+            "24/7 uptime monitoring, performance tracking, and instant alerts for any issues or downtime.",
+        },
+        {
+          icon: "🛠️",
+          title: "Priority Technical Support",
+          description:
+            "Direct access to our development team for bug fixes, content updates, and technical assistance.",
+        },
+      ],
+      gradient: {
+        primary: "rgba(34,197,94,0.1)",
+        secondary: "rgba(16,185,129,0.1)",
+        badge: "green",
+        text: "from-green-400 to-emerald-600",
+        card: "from-green-500/10 to-emerald-500/10",
+        icon: "from-green-500 to-emerald-600",
+      },
+    },
+    caseStudies: {
+      heading: {
+        badge: "Client Success",
+        title: "Peace of Mind",
+        highlight: "Through Reliable Support",
+      },
+      description:
+        "See how our maintenance services have kept businesses online, secure, and performing at their best without any technical headaches.",
+      showStats: true,
+      projects: [
+        {
+          title: "E-commerce Platform",
+          description:
+            "Maintained 99.99% uptime for high-traffic online store during Black Friday, handling 50K+ concurrent users without a single outage.",
+          icon: "🛒",
+          category: "E-commerce",
+          link: "/portfolio/ecommerce-maintenance",
+          tags: ["24/7 Monitoring", "Security", "Backup"],
+          stats: [
+            { icon: Award, value: "99.99%", label: "Uptime" },
+            { icon: TrendingUp, value: "50K+", label: "Peak Users" },
+          ],
+        },
+        {
+          title: "Healthcare Portal",
+          description:
+            "HIPAA-compliant maintenance with zero security breaches, automated daily backups, and <1hr critical issue resolution time.",
+          icon: "⚕️",
+          category: "Healthcare",
+          link: "/portfolio/healthcare-support",
+          tags: ["HIPAA", "Security", "Priority Support"],
+          stats: [
+            { icon: Award, value: "0", label: "Security Breaches" },
+            { icon: Clock, value: "<1hr", label: "Issue Resolution" },
+          ],
+        },
+        {
+          title: "Corporate Website",
+          description:
+            "Prevented 12 potential security threats, performed 100+ updates, and maintained perfect performance scores for enterprise client.",
+          icon: "🏢",
+          category: "Enterprise",
+          link: "/portfolio/corporate-maintenance",
+          tags: ["Updates", "Security", "Performance"],
+          stats: [
+            { icon: Award, value: "12", label: "Threats Blocked" },
+            { icon: TrendingUp, value: "100+", label: "Updates Done" },
+          ],
+        },
+      ],
+      cta: {
+        text: "Get Your Maintenance Plan",
+        link: "/contact",
+      },
+      gradient: {
+        primary: "rgba(34,197,94,0.08)",
+        badge: "green",
+        text: "from-green-400 to-emerald-600",
+        card: "from-green-500/10 to-emerald-500/10",
+        imagePlaceholder: "from-green-500/20 to-emerald-500/20",
+      },
+    },
+    techStack: {
+      heading: {
+        badge: "Monitoring Tools",
+        title: "Professional Support",
+        highlight: "Tools & Infrastructure",
+      },
+      description:
+        "We use enterprise-grade monitoring, security, and backup tools to ensure your website stays online, secure, and performing optimally around the clock.",
+      technologies: [
+        {
+          name: "UptimeRobot",
+          emoji: "🤖",
+          color: "#4A90E2",
+          colorAlt: "#6AA7E8",
+          description: "Uptime Monitoring",
+        },
+        {
+          name: "Cloudflare",
+          emoji: "🛡️",
+          color: "#F38020",
+          colorAlt: "#FF9645",
+          description: "Security & CDN",
+        },
+        {
+          name: "BackupBuddy",
+          emoji: "💾",
+          color: "#1E8CBE",
+          colorAlt: "#3AA5D8",
+          description: "Automated Backups",
+        },
+        {
+          name: "Sucuri",
+          emoji: "🔒",
+          color: "#00A199",
+          colorAlt: "#00C4BA",
+          description: "Malware Scanning",
+        },
+        {
+          name: "New Relic",
+          emoji: "📊",
+          color: "#008C99",
+          colorAlt: "#00A8B8",
+          description: "Performance Monitoring",
+        },
+        {
+          name: "Sentry",
+          emoji: "🐛",
+          color: "#362D59",
+          colorAlt: "#594D7A",
+          description: "Error Tracking",
+        },
+      ],
+      gradient: {
+        primary: "rgba(34,197,94,0.08)",
+        badge: "green",
+        text: "from-green-400 to-emerald-600",
+      },
+      bottomNote:
+        "All monitoring includes real-time alerts and detailed monthly reports.",
+    },
+    faq: {
+      heading: {
+        badge: "Support FAQ",
+        title: "Questions About",
+        highlight: "Maintenance & Support",
+      },
+      description:
+        "Common questions about our website maintenance plans and how we keep your site running smoothly.",
+      faqs: [
+        {
+          question: "What's included in a maintenance plan?",
+          answer:
+            "Our plans include security updates, plugin/theme updates, daily backups, uptime monitoring, performance optimization, malware scanning, SSL management, and priority technical support based on your chosen tier.",
+          icon: Settings,
+          link: {
+            text: "Compare maintenance plans",
+            url: "/maintenance-plans",
+          },
+        },
+        {
+          question: "How quickly do you respond to issues?",
+          answer:
+            "Critical issues (site down) get <2hr response on all plans. Non-critical issues are handled within 24hrs (Standard) or 4hrs (Premium). Emergency hotline available for Premium clients.",
+          icon: Clock,
+        },
+        {
+          question: "What happens if my site gets hacked?",
+          answer:
+            "We restore from clean backup, remove malware, patch vulnerabilities, and strengthen security. Premium plans include hack recovery at no extra cost. We also provide post-incident analysis and preventive measures.",
+          icon: Lock,
+        },
+        {
+          question: "How much do maintenance plans cost?",
+          answer:
+            "Plans start at ₹5,000/month (Basic) for small sites with essential monitoring and updates. Standard plans (₹12,000/mo) include priority support. Premium plans (₹25,000+/mo) offer 24/7 support and advanced security.",
+          icon: DollarSign,
+          link: {
+            text: "View pricing details",
+            url: "/contact",
+          },
+        },
+      ],
+      cta: {
+        title: "Protect Your Website Today",
+        description:
+          "Choose a maintenance plan that fits your needs and sleep better knowing experts are watching your site.",
+        primaryText: "Choose Your Plan",
+        primaryLink: "/contact",
+        secondaryText: "See What's Included",
+        secondaryLink: "/maintenance-plans",
+      },
+      gradient: {
+        primary: "rgba(34,197,94,0.08)",
+        badge: "green",
+        text: "from-green-400 to-emerald-600",
+        card: "from-green-500/10 to-emerald-500/10",
+        icon: "from-green-500 to-emerald-600",
+        bottomBar: "from-green-500 to-emerald-600",
+      },
+    },
+  },
+];
 
 export default services;

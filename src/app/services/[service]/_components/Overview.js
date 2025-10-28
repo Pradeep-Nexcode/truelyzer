@@ -1,23 +1,20 @@
-'use client'
+"use client";
 
-import services from '@/data/services'
-import { motion } from 'framer-motion'
+import services from "@/data/services";
+import { motion } from "framer-motion";
 
-const ServiceOverview = () => {
-  const {
-    heading,
-    description,
-    highlights,
-    gradient
-  } = services[0].overview
-
+const ServiceOverview = ({ data, serviceId }) => {
+  const src = data || services.find((s) => s.id === serviceId) || services[0];
+  const { heading, description, highlights, gradient } = src.overview;
   return (
     <section className="relative py-32 bg-neutral-950 px-6 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <motion.div
           className={`absolute top-1/3 right-1/4 w-96 h-96 rounded-full blur-3xl`}
-          style={{ backgroundColor: gradient?.primary || 'rgba(16,185,129,0.1)' }}
+          style={{
+            backgroundColor: gradient?.primary || "rgba(16,185,129,0.1)",
+          }}
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -26,7 +23,9 @@ const ServiceOverview = () => {
         />
         <motion.div
           className={`absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full blur-3xl`}
-          style={{ backgroundColor: gradient?.secondary || 'rgba(59,130,246,0.1)' }}
+          style={{
+            backgroundColor: gradient?.secondary || "rgba(59,130,246,0.1)",
+          }}
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.2, 0.4, 0.2],
@@ -47,8 +46,12 @@ const ServiceOverview = () => {
             viewport={{ once: true }}
             className="inline-block mb-4"
           >
-            <span className={`text-${gradient?.badge || 'emerald'}-500 text-sm font-semibold tracking-wider uppercase`}>
-              {heading.badge || 'What We Offer'}
+            <span
+              className={`text-${
+                gradient?.badge || "emerald"
+              }-500 text-sm font-semibold tracking-wider uppercase`}
+            >
+              {heading.badge || "What We Offer"}
             </span>
           </motion.div>
 
@@ -61,7 +64,11 @@ const ServiceOverview = () => {
           >
             {heading.title}
             {heading.highlight && (
-              <span className={`block mt-2 bg-gradient-to-r ${gradient?.text || 'from-emerald-400 to-teal-400'} bg-clip-text text-transparent`}>
+              <span
+                className={`block mt-2 bg-gradient-to-r ${
+                  gradient?.text || "from-emerald-400 to-teal-400"
+                } bg-clip-text text-transparent`}
+              >
                 {heading.highlight}
               </span>
             )}
@@ -102,22 +109,38 @@ const ServiceOverview = () => {
               className="group relative"
             >
               {/* Glow effect on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${gradient?.card || 'from-emerald-500/10 to-teal-500/10'} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-              
+              <div
+                className={`absolute inset-0 bg-gradient-to-r ${
+                  gradient?.card || "from-emerald-500/10 to-teal-500/10"
+                } rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+              ></div>
+
               {/* Card */}
-              <div className={`relative h-full bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 rounded-2xl p-8 hover:border-${gradient?.badge || 'emerald'}-500/50 transition-all duration-300`}>
+              <div
+                className={`relative h-full bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 rounded-2xl p-8 hover:border-${
+                  gradient?.badge || "emerald"
+                }-500/50 transition-all duration-300`}
+              >
                 {/* Icon */}
                 <div className="flex items-start gap-4">
-                  <div className={`flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${gradient?.icon || 'from-emerald-500 to-teal-600'} flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${
+                      gradient?.icon || "from-emerald-500 to-teal-600"
+                    } flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                  >
                     {item.icon}
                   </div>
-                  
+
                   <div className="flex-1">
                     {/* Title */}
-                    <h3 className={`text-xl font-bold text-white mb-2 group-hover:text-${gradient?.badge || 'emerald'}-400 transition-colors`}>
+                    <h3
+                      className={`text-xl font-bold text-white mb-2 group-hover:text-${
+                        gradient?.badge || "emerald"
+                      }-400 transition-colors`}
+                    >
                       {item.title}
                     </h3>
-                    
+
                     {/* Description */}
                     <p className="text-gray-400 leading-relaxed">
                       {item.description}
@@ -130,8 +153,7 @@ const ServiceOverview = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServiceOverview
-   
+export default ServiceOverview;

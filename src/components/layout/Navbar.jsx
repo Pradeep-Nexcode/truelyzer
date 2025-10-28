@@ -16,11 +16,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Work", href: "#work" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "home" },
+    { name: "Services", href: "services" },
+    { name: "Work", href: "work" },
+    { name: "About", href: "about" },
+    { name: "Contact", href: "contact" },
   ];
 
   return (

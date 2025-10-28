@@ -92,7 +92,7 @@ const ContactCTA = () => {
           >
             {/* WhatsApp button - Primary */}
             <Link
-              href="https://wa.me/918610737186?text=Hi!%20I%20visited%20Truelyzer%20and%20want%20to%20discuss%20a%20website%20project."
+              href="https://wa.me/918754043874?text=Hi!%20I%20visited%20Truelyzer%20and%20want%20to%20discuss%20a%20website%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 bg-white text-emerald-700 font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
@@ -132,12 +132,12 @@ const ContactCTA = () => {
             <h3 className="text-lg font-bold text-white mb-2">WhatsApp</h3>
             <p className="text-emerald-50/80 text-sm mb-3">Quick responses, instant updates</p>
             <Link
-              href="https://wa.me/918610737186"
+              href="https://wa.me/918754043874"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:gap-3 transition-all"
             >
-              +91 86107 37186
+              +91 87540 43874
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -166,10 +166,10 @@ const ContactCTA = () => {
             <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>
             <p className="text-emerald-50/80 text-sm mb-3">Mon-Sat, 9 AM - 7 PM IST</p>
             <Link
-              href="tel:+918610737186"
+              href="tel:+918754043874"
               className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:gap-3 transition-all"
             >
-              +91 86107 37186
+              +91 87540 43874
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
