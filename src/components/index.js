@@ -14,3 +14,6 @@ export { default as Blogs } from './sections/Blogs'
 // UI Components
 export { default as Button } from './ui/Button';
 export { default as Container } from './ui/Container';
+
+// default
+// export { default as ContactModal } from './forms/ContactModal'

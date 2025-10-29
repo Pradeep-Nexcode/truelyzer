@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useContactModal } from "../forms/ContactModal";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+ const { openModal } = useContactModal()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "home" },
+    { name: "Home", href: "" },
     { name: "Services", href: "services" },
     { name: "Work", href: "work" },
     { name: "About", href: "about" },
@@ -55,12 +57,14 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center">
-            <Link
-              href="#contact"
+            <button
+               onClick={() => {
+                  openModal();
+                }}
               className="relative overflow-hidden inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-emerald-500 hover:bg-emerald-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]"
             >
               Get Quote
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,13 +111,16 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="#contact"
+              <button
+               
                 className="block mx-3 mt-4 bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-2.5 rounded-full font-medium text-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(16,185,129,0.4)]"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  openModal();
+                }}
               >
                 Get Quote
-              </Link>
+              </button>
             </div>
           </div>
         )}

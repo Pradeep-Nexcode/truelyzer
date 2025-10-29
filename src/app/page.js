@@ -1,9 +1,10 @@
-import { Navbar, Hero, Portfolio, Process,Testimonials,ContactCTA ,Footer,OurWorks, Blogs} from '@/components';
+import {  Hero, Portfolio, Process,Testimonials,ContactCTA ,OurWorks, Blogs} from '@/components';
 
 export default function Home() {
   return (
     <>
       <Hero /> 
+      {/* <ContactModal/> */}
       <Portfolio />
       {/* <CursorParticles/> */}
       <Process />
