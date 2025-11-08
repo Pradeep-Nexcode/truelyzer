@@ -34,6 +34,12 @@ export default function RootLayout({ children }) {
       <head>
         {/* 👇 Add this sitemap reference for SEO crawlers */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+        {/* 👇 Add this Google Site Verification meta tag */}
+        <meta
+          name="google-site-verification"
+          content="cnvLS9KBqK6ffXI4_thFmd_J1d7caqhag5qgW4iKqH8"
+        />
       </head>
 
       <body className={`${nunito.variable} antialiased`}>
