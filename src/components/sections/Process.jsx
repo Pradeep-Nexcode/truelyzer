@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Lightbulb, Palette, Code, Rocket } from "lucide-react";
+import Link from 'next/link';
 
 const steps = [
   {
@@ -158,9 +159,11 @@ const Process = () => {
           <p className="text-gray-400 mb-6">
             Average project timeline: <span className="text-white font-semibold">6-10 weeks</span> from kickoff to launch
           </p>
-          <button className="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/20">
+          <Link 
+            href="#contact"
+           className="px-8 py-4 cursor-pointer bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/20">
             Start Your Project
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

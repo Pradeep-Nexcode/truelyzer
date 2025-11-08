@@ -232,18 +232,18 @@ Let’s start with your **Category 1: Web Development** — here’s a list of *
 15. “How to Optimize Your Website for Speed (Core Web Vitals Guide)”
 16. “Lazy Loading, Code Splitting, and Other Speed Hacks You Need to Know”
 17. “The Ultimate SEO Checklist for Web Developers”
-18. “Why Lighthouse Score Matters — And How to Improve Yours”
+- 18. “Why Lighthouse Score Matters — And How to Improve Yours”
 19. “How to Build a Website That Loads in Under 2 Seconds”
 
 ---
 
 ### 🔹 **Career & Trends**
 
-20. “Top Web Development Trends to Watch in 2025”
-21. “Is Web Development Still a Good Career in 2025?”
-22. “How to Build a Portfolio That Actually Gets You Clients”
-23. “Freelance vs Full-Time Developer: Which Path Is Right for You?”
-24. “5 Mistakes That Are Slowing Down Your Web Dev Career”
+- 20. “Top Web Development Trends to Watch in 2025”
+- 21. “Is Web Development Still a Good Career in 2025?”
+- 22. “How to Build a Portfolio That Actually Gets You Clients”
+- 23. “Freelance vs Full-Time Developer: Which Path Is Right for You?”
+- 24. “5 Mistakes That Are Slowing Down Your Web Dev Career”
 
 ---
 
@@ -252,11 +252,36 @@ Let’s start with your **Category 1: Web Development** — here’s a list of *
 25. “Server Components in Next.js Explained Simply”
 26. “How to Use Edge Functions to Boost Performance”
 27. “Static vs Dynamic Rendering — Which One Should You Choose?”
-28. “The Hidden Power of ISR (Incremental Static Regeneration) in Next.js”
+- 28. “The Hidden Power of ISR (Incremental Static Regeneration) in Next.js”
 29. “Building Secure Web Apps: A Practical Guide for Developers”
-30. “How to Implement Authentication in Next.js with NextAuth.js”
+- 30. “How to Implement Authentication in Next.js with NextAuth.js”
 
 ---
 
 Would you like me to now create **Category 2 ideas** (for example, “UI/UX Design” or “Tech & Tools”)?
 Or do you want me to go deeper on **Web Development** first — like giving **SEO descriptions, meta keywords, and short intros** for each title?
+
+
+
+
+  key: "",
+
+    slug: "",
+    title: "",
+    metaTitle: "",
+    metaDescription:
+      "",
+    date: "October 22, 2025",
+    readTime: "9 min read",
+    views: "3.3K",
+    category: "API & Data",
+    tags: ["Web Development", "Frontend", "Backend", "2025 Trends"],
+    image:
+      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    author: {
+      name: "Pradeep M",
+      role: "Full-Stack Developer",
+      avatar:
+        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200",
+      bio: "Full-stack developer passionate about building scalable web applications and sharing knowledge with the community.",
+    },

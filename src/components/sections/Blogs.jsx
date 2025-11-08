@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight, TrendingUp, Code, Zap, User } from "lucide-react";
 import Image from "next/image";
+import { blogs } from "@/data/blogs";
 
 const blogPosts = [
   {
@@ -45,6 +46,11 @@ const blogPosts = [
     color: "orange"
   },
 ];
+
+const slugs = ["how-to-optimize-nextjs-performance", "complete-beginners-guide-to-web-development-2025", "the-future-of-frontend-development-what-to-expect-in-2026"];
+
+const my_blogs = blogs.filter(blog => slugs.includes(blog.slug));
+
 
 const colorVariants = {
   emerald: {
@@ -116,13 +122,15 @@ const Blogs = () => {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {blogPosts.map((post, index) => {
-            const Icon = post.icon;
-            const colors = colorVariants[post.color];
-            
+          {my_blogs.map((post, index) => {
+             const Icon = post.icon || Code;
+            const colors = colorVariants[post.color] || colorVariants.emerald;
+
+            console.log(Icon, "Icon")
+
             return (
               <motion.article
-                key={post.id}
+                key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -130,8 +138,8 @@ const Blogs = () => {
                 className="group relative"
               >
                 {/* Card */}
-                <div className={`relative bg-neutral-900 border ${colors.border} ${colors.hover} rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-${post.color}-500/10 h-full flex flex-col`}>
-                  
+                <div className={`relative bg-neutral-900 border ${colors?.border} ${colors?.hover} rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-${post.color}-500/10 h-full flex flex-col`}>
+
                   {/* Image Section */}
                   <div className="relative h-48 overflow-hidden">
                     <Image
@@ -141,14 +149,14 @@ const Blogs = () => {
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent"></div>
-                    
+
                     {/* Category Badge */}
-                    <div className={`absolute top-4 left-4 px-3 py-1.5 ${colors.bg} backdrop-blur-sm border ${colors.border} rounded-full`}>
-                      <span className={`text-xs font-semibold ${colors.text}`}>{post.category}</span>
+                    <div className={`absolute top-4 left-4 px-3 py-1.5 ${colors?.bg} backdrop-blur-sm border ${colors?.border} rounded-full`}>
+                      <span className={`text-xs font-semibold ${colors?.text}`}>{post.category}</span>
                     </div>
 
                     {/* Icon Badge */}
-                    <div className={`absolute top-4 right-4 w-10 h-10 bg-gradient-to-br ${colors.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
+                    <div className={`absolute top-4 right-4 w-10 h-10 bg-gradient-to-br ${colors?.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
                       <Icon className="w-5 h-5 text-white" />
                     </div>
                   </div>
@@ -168,7 +176,7 @@ const Blogs = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className={`text-xl font-bold text-white mb-3 group-hover:${colors.text} transition-colors duration-300 line-clamp-2`}>
+                    <h3 className={`text-xl font-bold text-white mb-3 group-hover:${colors?.text} transition-colors duration-300 line-clamp-2`}>
                       {post.title}
                     </h3>
 
@@ -195,12 +203,12 @@ const Blogs = () => {
                         <div className="w-8 h-8 bg-neutral-800 rounded-full flex items-center justify-center">
                           <User className="w-4 h-4 text-gray-400" />
                         </div>
-                        <span className="text-xs text-gray-500">{post.author}</span>
+                        <span className="text-xs text-gray-500">{post.author.name}</span>
                       </div>
 
-                      <Link 
-                        href={`/blog/${post.id}`}
-                        className={`inline-flex items-center gap-2 ${colors.text} font-semibold text-sm group/link`}
+                      <Link
+                        href={`/blogs/${post.id}`}
+                        className={`inline-flex items-center gap-2 ${colors?.text} font-semibold text-sm group/link`}
                       >
                         Read More
                         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -210,7 +218,7 @@ const Blogs = () => {
                 </div>
 
                 {/* Glow Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${colors.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${colors?.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10`}></div>
               </motion.article>
             );
           })}
@@ -227,7 +235,7 @@ const Blogs = () => {
           <div className="relative bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 rounded-2xl p-8 md:p-12 text-center overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
-            
+
             <div className="relative z-10">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Want More Web Dev Tips?
@@ -235,7 +243,7 @@ const Blogs = () => {
               <p className="text-gray-400 mb-6 max-w-xl mx-auto">
                 Join 5,000+ developers and get weekly insights on React, Next.js, performance optimization, and more.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
                 <input
                   type="email"
@@ -246,7 +254,7 @@ const Blogs = () => {
                   Subscribe Free
                 </button>
               </div>
-              
+
               <p className="text-xs text-gray-500 mt-4">
                 No spam. Unsubscribe anytime. 100% free forever.
               </p>
@@ -263,7 +271,7 @@ const Blogs = () => {
           className="text-center mt-12"
         >
           <Link
-            href="/blog"
+            href="/blogs"
             className="group inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 border border-neutral-800 text-white font-semibold text-lg rounded-full hover:border-emerald-500/50 hover:bg-neutral-800 transition-all duration-300"
           >
             View All Articles

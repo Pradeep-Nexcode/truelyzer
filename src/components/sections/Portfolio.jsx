@@ -82,12 +82,32 @@ const Portfolio = () => {
   ]
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-20 px-4 md:px-8 overflow-hidden">
-      {/* Subtle background effects */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+    <section
+      id="portfolio"
+      className="relative min-h-screen bg-neutral-950 text-white py-24 px-6 sm:px-8 lg:px-12 overflow-hidden"
+    >
+      {/* Background Effects - Matching Hero */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:80px_80px] opacity-10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(16,185,129,0.08),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-5"></div>
 
+      {/* Floating Particles - Matching Hero */}
+      {[...Array(10)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 bg-emerald-400 rounded-full opacity-30"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+          }}
+          animate={{ y: [0, -40, 0], opacity: [0, 0.4, 0] }}
+          transition={{
+            duration: 3 + Math.random() * 3,
+            repeat: Infinity,
+            delay: Math.random() * 2,
+          }}
+        />
+      ))}
       <div className="relative max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -128,7 +148,7 @@ const Portfolio = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-                
+
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
                   <span className={`px-3 py-1 text-xs font-semibold text-white bg-gradient-to-r ${project.gradient} rounded-full`}>
@@ -139,7 +159,7 @@ const Portfolio = () => {
                 {/* Action Buttons */}
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
-                  animate={{ 
+                  animate={{
                     opacity: hoveredIndex === index ? 1 : 0,
                     y: hoveredIndex === index ? 0 : -10
                   }}
@@ -185,14 +205,14 @@ const Portfolio = () => {
                 </div>
 
                 {/* Metrics */}
-                <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-700/50">
+                {/* <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-700/50">
                   {Object.entries(project.metrics).map(([key, value], i) => (
                     <div key={i} className="text-center">
                       <div className="text-emerald-400 text-sm font-bold">{value}</div>
                       <div className="text-slate-500 text-xs capitalize">{key}</div>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
 
               {/* Hover Glow */}

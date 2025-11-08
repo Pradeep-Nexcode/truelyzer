@@ -251,16 +251,16 @@ const Hero = () => {
             </span>
           </Link>
 
-          <Link
+          <a
             href="#portfolio"
             className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full border-2 border-emerald-500/40 text-gray-200 hover:border-emerald-400 hover:bg-emerald-500/10 transition-all duration-300"
           >
             View Portfolio
-          </Link>
+          </a>
         </motion.div>
 
         {/* Stats */}
-        <motion.div
+        {/* <motion.div
           className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -281,7 +281,7 @@ const Hero = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Scroll Indicator */}

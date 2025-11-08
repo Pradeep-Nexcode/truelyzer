@@ -2,10 +2,10 @@
 
 // import { useRouter } from "next/navigation";
 // import { motion } from "framer-motion";
-// import { 
-//   ArrowLeft, 
-//   Twitter, 
-//   Linkedin, 
+// import {
+//   ArrowLeft,
+//   Twitter,
+//   Linkedin,
 //   Calendar,
 //   Clock,
 //   BookOpen,
@@ -116,7 +116,7 @@
 //       <article className="max-w-4xl mx-auto px-6 py-16">
 //         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
 //           <div className="text-gray-300 leading-relaxed space-y-6 text-lg">
-//             {post.content.split('\n\n').map((p, i) => 
+//             {post.content.split('\n\n').map((p, i) =>
 //               p.startsWith('##') ? <h2 key={i} className="text-3xl font-bold text-white mt-12 mb-6">{p.replace(/^##\s*/, '')}</h2> :
 //               p.startsWith('###') ? <h3 key={i} className="text-2xl font-bold text-white mt-8 mb-4">{p.replace(/^###\s*/, '')}</h3> :
 //               <p key={i}>{p}</p>
@@ -202,11 +202,11 @@
 
 import { useRouter, useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { 
-  ArrowLeft, 
-  Share2, 
-  Twitter, 
-  Linkedin, 
+import {
+  ArrowLeft,
+  Share2,
+  Twitter,
+  Linkedin,
   Link as LinkIcon,
   Calendar,
   Clock,
@@ -215,20 +215,22 @@ import {
   BookOpen,
   Facebook,
   Copy,
-  Check
+  Check,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { blogs } from "@/data/blogs";
-
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 const BlogPostPage = () => {
   const router = useRouter();
   const params = useParams();
   const [copied, setCopied] = useState(false);
 
   // Find the blog post that matches the slug from the URL
-  const post = blogs.find(blog => blog.slug === params.blog);
+  const post = blogs.find((blog) => blog.slug === params.blog);
 
   // If no matching blog post is found, show error or redirect
   if (!post) {
@@ -236,8 +238,8 @@ const BlogPostPage = () => {
       <div className="min-h-screen bg-neutral-950 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Blog Post Not Found</h1>
-          <button 
-            onClick={() => router.push('/blogs')}
+          <button
+            onClick={() => router.push("/blogs")}
             className="text-emerald-400 hover:text-emerald-300"
           >
             Return to Blogs
@@ -257,27 +259,33 @@ const BlogPostPage = () => {
     {
       id: 1,
       title: "Next.js Animations: A Complete Guide",
-      excerpt: "Master animation techniques in Next.js with Framer Motion and CSS animations.",
-      image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=600",
+      excerpt:
+        "Master animation techniques in Next.js with Framer Motion and CSS animations.",
+      image:
+        "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=600",
       category: "Development",
-      readTime: "6 min"
+      readTime: "6 min",
     },
     {
       id: 2,
       title: "Improving SEO in React Applications",
-      excerpt: "Best practices for optimizing your React apps for search engines.",
-      image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=600",
+      excerpt:
+        "Best practices for optimizing your React apps for search engines.",
+      image:
+        "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=600",
       category: "SEO",
-      readTime: "7 min"
+      readTime: "7 min",
     },
     {
       id: 3,
       title: "Building Modern APIs with GraphQL",
-      excerpt: "Learn how GraphQL simplifies data fetching in modern applications.",
-      image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600",
+      excerpt:
+        "Learn how GraphQL simplifies data fetching in modern applications.",
+      image:
+        "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600",
       category: "Backend",
-      readTime: "10 min"
-    }
+      readTime: "10 min",
+    },
   ];
 
   return (
@@ -318,7 +326,9 @@ const BlogPostPage = () => {
               {/* Category Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 backdrop-blur-sm border border-emerald-500/30 rounded-full mb-6">
                 <Tag className="w-4 h-4 text-emerald-400" />
-                <span className="text-sm font-semibold text-emerald-400">{post.category}</span>
+                <span className="text-sm font-semibold text-emerald-400">
+                  {post.category}
+                </span>
               </div>
 
               {/* Title */}
@@ -334,7 +344,9 @@ const BlogPostPage = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
-                  <span className="text-sm text-emerald-400">{post.readTime}</span>
+                  <span className="text-sm text-emerald-400">
+                    {post.readTime}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4" />
@@ -353,7 +365,9 @@ const BlogPostPage = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">{post.author.name}</h4>
+                  <h4 className="font-semibold text-white">
+                    {post.author.name}
+                  </h4>
                   <p className="text-gray-400 text-sm">{post.author.role}</p>
                 </div>
               </div>
@@ -361,8 +375,8 @@ const BlogPostPage = () => {
           </div>
         </div>
       </section>
-
       {/* Main Content */}
+
       <article className="max-w-4xl mx-auto px-6 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -370,33 +384,43 @@ const BlogPostPage = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="prose prose-lg prose-invert prose-emerald max-w-none"
         >
-          <div className="text-gray-300 leading-relaxed space-y-6 text-lg">
-            {post.content.split('\n\n').map((paragraph, index) => {
-              // Check if it's a heading
-              if (paragraph.startsWith('##')) {
-                const headingText = paragraph.replace(/^##\s*/, '');
-                return (
-                  <h2 key={index} className="text-3xl font-bold text-white mt-12 mb-6">
-                    {headingText}
-                  </h2>
-                );
-              }
-              // Check if it's a subheading
-              if (paragraph.startsWith('###')) {
-                const headingText = paragraph.replace(/^###\s*/, '');
-                return (
-                  <h3 key={index} className="text-2xl font-bold text-white mt-8 mb-4">
-                    {headingText}
-                  </h3>
-                );
-              }
-              return (
-                <p key={index} className="leading-relaxed">
-                  {paragraph}
-                </p>
-              );
-            })}
-          </div>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]} // allows <code> and inline HTML
+            components={{
+              h1: ({ node, ...props }) => (
+                <h1
+                  className="text-4xl font-bold text-white mt-12 mb-6"
+                  {...props}
+                />
+              ),
+              h2: ({ node, ...props }) => (
+                <h2
+                  className="text-3xl font-bold text-white mt-12 mb-6"
+                  {...props}
+                />
+              ),
+              h3: ({ node, ...props }) => (
+                <h3
+                  className="text-2xl font-semibold text-white mt-8 mb-4"
+                  {...props}
+                />
+              ),
+              code: ({ node, inline, ...props }) =>
+                inline ? (
+                  <code
+                    className="bg-neutral-800 px-1 rounded text-emerald-400"
+                    {...props}
+                  />
+                ) : (
+                  <pre className="bg-neutral-900 p-4 rounded-xl overflow-x-auto">
+                    <code {...props} />
+                  </pre>
+                ),
+            }}
+          >
+            {post.content}
+          </ReactMarkdown>
         </motion.div>
 
         {/* Tags */}
@@ -420,7 +444,6 @@ const BlogPostPage = () => {
           </div>
         </motion.div>
       </article>
-
       {/* Author Bio Section */}
       <section className="max-w-4xl mx-auto px-6 py-12">
         <motion.div
@@ -439,7 +462,9 @@ const BlogPostPage = () => {
               />
             </div>
             <div>
-              <h4 className="text-xl font-bold text-white mb-2">About {post.author.name}</h4>
+              <h4 className="text-xl font-bold text-white mb-2">
+                About {post.author.name}
+              </h4>
               <p className="text-gray-400 mb-4">{post.author.bio}</p>
               <div className="flex gap-3">
                 <button className="p-2 bg-neutral-800 rounded-lg hover:bg-emerald-500/20 transition-all">
@@ -453,7 +478,6 @@ const BlogPostPage = () => {
           </div>
         </motion.div>
       </section>
-
       {/* Share Section */}
       <section className="max-w-4xl mx-auto px-6 py-12 border-t border-neutral-800">
         <motion.div
@@ -462,7 +486,9 @@ const BlogPostPage = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-xl font-bold text-white mb-4">Share this article</h3>
+          <h3 className="text-xl font-bold text-white mb-4">
+            Share this article
+          </h3>
           <div className="flex justify-center gap-4">
             <button className="group p-4 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-blue-500/50 hover:bg-blue-500/10 transition-all">
               <Twitter className="w-5 h-5 text-gray-400 group-hover:text-blue-400" />
@@ -486,7 +512,6 @@ const BlogPostPage = () => {
           </div>
         </motion.div>
       </section>
-
       {/* Related Posts */}
       <section className="max-w-7xl mx-auto px-6 py-20 border-t border-neutral-800">
         <motion.div
@@ -518,10 +543,12 @@ const BlogPostPage = () => {
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"></div>
-                    
+
                     {/* Category */}
                     <div className="absolute top-4 left-4 px-3 py-1.5 bg-emerald-500/20 backdrop-blur-sm border border-emerald-500/30 rounded-full">
-                      <span className="text-xs font-semibold text-emerald-400">{relatedPost.category}</span>
+                      <span className="text-xs font-semibold text-emerald-400">
+                        {relatedPost.category}
+                      </span>
                     </div>
                   </div>
 
@@ -534,7 +561,9 @@ const BlogPostPage = () => {
                       {relatedPost.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-500">{relatedPost.readTime}</span>
+                      <span className="text-xs text-gray-500">
+                        {relatedPost.readTime}
+                      </span>
                       <Link
                         href={`/blog/${relatedPost.id}`}
                         className="text-emerald-400 text-sm font-semibold hover:gap-2 flex items-center gap-1 transition-all"

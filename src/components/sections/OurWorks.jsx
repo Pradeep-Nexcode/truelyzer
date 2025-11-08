@@ -36,7 +36,7 @@ const OurWorks = () => {
   const [hoveredId, setHoveredId] = useState(null)
 
   return (
-    <section className="relative py-20 bg-neutral-950 overflow-hidden">
+    <section id='ourworks' className="relative py-20 bg-neutral-950 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:80px_80px] opacity-20"></div>
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
@@ -104,7 +104,7 @@ const OurWorks = () => {
                   </div>
 
                   {/* Icon */}
-                  <div className={`absolute -bottom-6 right-4 w-12 h-12 bg-gradient-to-r ${project.gradient} rounded-xl flex items-center justify-center shadow-lg ${isHovered ? 'scale-110' : ''} transition-transform duration-300`}>
+                  <div className={`absolute bottom-1 right-4 w-12 h-12 bg-gradient-to-r ${project.gradient} rounded-xl flex items-center justify-center shadow-lg ${isHovered ? 'scale-110' : ''} transition-transform duration-300`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
@@ -135,7 +135,7 @@ const OurWorks = () => {
                   </div>
 
                   {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-2 mb-4 pt-4 border-t border-neutral-800">
+                  {/* <div className="grid grid-cols-3 gap-2 mb-4 pt-4 border-t border-neutral-800">
                     {Object.entries(project.metrics).map(([key, value], i) => (
                       <div key={i} className="text-center">
                         <div className={`text-lg font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}>
@@ -144,7 +144,7 @@ const OurWorks = () => {
                         <div className="text-xs text-gray-600 capitalize">{key}</div>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
 
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2">
