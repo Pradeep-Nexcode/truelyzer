@@ -66,7 +66,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <h2 className="text-3xl font-bold text-white">
-                True<span className="text-emerald-500">lyzer</span>
+                Tru<span className="text-emerald-500">lyzer</span>
               </h2>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-8">

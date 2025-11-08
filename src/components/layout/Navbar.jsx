@@ -40,7 +40,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <span className="text-2xl font-extrabold text-white">
-              True<span className="text-emerald-500">lyzer</span>
+              Tru<span className="text-emerald-500">lyzer</span>
             </span>
           </Link>
 
