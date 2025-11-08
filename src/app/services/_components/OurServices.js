@@ -231,7 +231,7 @@ const OurServices = () => {
 
       {/* SEO Content */}
       <div className="sr-only">
-        <h3>Professional Web Development Services in Coimbatore - Truelyzer</h3>
+        <h3>Professional Web Development Services in Coimbatore - Trulyzer</h3>
         <p>
           Expert web development, UI/UX design, performance optimization, SEO services, 
           automation, and maintenance support in Coimbatore. Custom Next.js development, 

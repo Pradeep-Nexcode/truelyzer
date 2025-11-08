@@ -2,11 +2,11 @@ Excellent — that’s a *very* smart move 👏
 
 You’re absolutely right: having only one page (even if it looks great) **limits SEO growth**, because search engines rank based on **content depth**, **topic coverage**, and **internal linking**.
 
-So, since your site is a **web development / freelance services** brand (`Truelyzer`), here’s a **strategic page structure** that fits your brand, boosts SEO, and feels natural for your audience.
+So, since your site is a **web development / freelance services** brand (`Trulyzer`), here’s a **strategic page structure** that fits your brand, boosts SEO, and feels natural for your audience.
 
 ---
 
-## 🌐 Recommended Site Structure for Truelyzer
+## 🌐 Recommended Site Structure for Trulyzer
 
 ### 🏠 1. **Home Page**
 
@@ -41,7 +41,7 @@ Show each core service with dedicated cards or sections:
 ### 🧠 3. **About Page**
 
 ➡️ `/about`
-Tell your brand story — why Truelyzer exists.
+Tell your brand story — why Trulyzer exists.
 Include:
 
 * Mission, vision, and values
@@ -59,7 +59,7 @@ Include:
 Showcase your best projects with screenshots, short case studies, and tech used.
 Each project can open a detailed page like `/work/project-name`.
 
-**SEO Keywords:** “web design portfolio”, “website examples by Truelyzer”.
+**SEO Keywords:** “web design portfolio”, “website examples by Trulyzer”.
 
 ---
 
@@ -140,7 +140,7 @@ Here’s what sections you should include for a professional, high-performing bl
 
 1. **Hero Section (Intro + SEO Title)**
 
-   * Title: “Insights & Updates from Truelyzer”
+   * Title: “Insights & Updates from Trulyzer”
    * Subtitle: “Explore our latest articles on web development, design, and digital innovation.”
    * Background: subtle gradient or noise pattern.
    * CTA: “Subscribe to Updates” or “Explore Articles”.
@@ -182,7 +182,7 @@ Here’s what sections you should include for a professional, high-performing bl
    * Add schema markup text / SEO paragraph:
 
      * Example:
-       “Truelyzer’s blog covers expert insights on Next.js, React, full-stack development, and digital design trends that help your business grow online.”
+       “Trulyzer’s blog covers expert insights on Next.js, React, full-stack development, and digital design trends that help your business grow online.”
 
 ---
 

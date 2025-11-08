@@ -27,7 +27,7 @@ const page = () => {
           className="text-slate-400 text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           Have a project in mind? Whether you’re launching a new product or
-          improving an existing one, Truelyzer helps bring your digital vision
+          improving an existing one, Trulyzer helps bring your digital vision
           to life with strategy, design, and development excellence.
         </motion.p>
 
@@ -36,8 +36,8 @@ const page = () => {
           {[
             {
               title: "Email",
-              value: "hello@truelyzer.com",
-              href: "mailto:hello@truelyzer.com",
+              value: "hello@trulyzer.com",
+              href: "mailto:hello@trulyzer.com",
               icon: "✉️",
             },
             {

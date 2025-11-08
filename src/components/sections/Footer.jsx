@@ -22,9 +22,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, link: "https://www.instagram.com/truelyzer", label: "Instagram", color: "hover:bg-pink-500" },
-    { icon: Linkedin, link: "https://www.linkedin.com/company/truelyzer", label: "LinkedIn", color: "hover:bg-blue-500" },
-    { icon: Facebook, link: "https://www.facebook.com/truelyzer", label: "Facebook", color: "hover:bg-blue-600" }
+    { icon: Instagram, link: "https://www.instagram.com/trulyzer", label: "Instagram", color: "hover:bg-pink-500" },
+    { icon: Linkedin, link: "https://www.linkedin.com/company/trulyzer", label: "LinkedIn", color: "hover:bg-blue-500" },
+    { icon: Facebook, link: "https://www.facebook.com/trulyzer", label: "Facebook", color: "hover:bg-blue-600" }
   ];
 
   const handleSubscribe = () => {
@@ -175,7 +175,7 @@ const Footer = () => {
           </a>
 
           <a 
-            href="mailto:contact@truelyzer.com"
+            href="mailto:contact@trulyzer.com"
             className="flex items-center gap-4 p-4 bg-neutral-900/50 border border-neutral-800 rounded-xl hover:border-emerald-500/50 transition-all duration-300 group"
           >
             <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500/20 transition-colors">
@@ -183,7 +183,7 @@ const Footer = () => {
             </div>
             <div className="min-w-0">
               <div className="text-xs text-gray-500 mb-1">Email</div>
-              <div className="text-white text-sm font-medium truncate">contact@truelyzer.com</div>
+              <div className="text-white text-sm font-medium truncate">contact@trulyzer.com</div>
             </div>
           </a>
 
@@ -204,7 +204,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-sm text-gray-500">
-            © {new Date().getFullYear()} <span className="text-white font-semibold">Truelyzer</span>. All rights reserved.
+            © {new Date().getFullYear()} <span className="text-white font-semibold">Trulyzer</span>. All rights reserved.
           </div>
 
           <div className="flex items-center gap-8 text-sm">

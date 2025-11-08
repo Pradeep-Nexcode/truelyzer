@@ -92,7 +92,7 @@ const ContactCTA = () => {
           >
             {/* WhatsApp button - Primary */}
             <Link
-              href="https://wa.me/918754043874?text=Hi!%20I%20visited%20Truelyzer%20and%20want%20to%20discuss%20a%20website%20project."
+              href="https://wa.me/918754043874?text=Hi!%20I%20visited%20Trueyzer%20and%20want%20to%20discuss%20a%20website%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 bg-white text-emerald-700 font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
@@ -107,7 +107,7 @@ const ContactCTA = () => {
 
             {/* Email button - Secondary */}
             <Link
-              href="mailto:contact@truelyzer.com"
+              href="mailto:contact@trulyzer.com"
               className="group inline-flex items-center gap-3 border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 hover:border-white/60 transition-all duration-300"
             >
               <Mail className="w-5 h-5" />
@@ -150,10 +150,10 @@ const ContactCTA = () => {
             <h3 className="text-lg font-bold text-white mb-2">Email</h3>
             <p className="text-emerald-50/80 text-sm mb-3">Detailed inquiries welcome</p>
             <Link
-              href="mailto:contact@truelyzer.com"
+              href="mailto:contact@trulyzer.com"
               className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:gap-3 transition-all"
             >
-              contact@truelyzer.com
+              contact@trulyzer.com
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

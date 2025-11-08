@@ -9,7 +9,7 @@ const NewsletterCTA = () => {
         </h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
           Join our newsletter to get the latest insights on web development,
-          design, and tech innovation — straight from Truelyzer.
+          design, and tech innovation — straight from Trulyzer.
         </p>
 
         <form

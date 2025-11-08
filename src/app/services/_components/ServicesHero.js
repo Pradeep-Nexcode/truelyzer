@@ -219,7 +219,7 @@ const ServicesHero = () => {
 
       {/* SEO Content */}
       <div className="sr-only">
-        <h2>Professional Web Development Services in Coimbatore | Truelyzer</h2>
+        <h2>Professional Web Development Services in Coimbatore | Trulyzer</h2>
         <p>
           Expert web development, e-commerce solutions, UI/UX design, mobile app development,
           SEO optimization, and digital marketing services in Coimbatore, Tamil Nadu.

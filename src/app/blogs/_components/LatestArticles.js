@@ -104,7 +104,7 @@ export default function LatestArticlesGrid() {
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Insights, tutorials, and industry trends from the Truelyzer team.
+            Insights, tutorials, and industry trends from the Trulyzer team.
           </p>
         </motion.div>
 

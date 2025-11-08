@@ -5,13 +5,13 @@
 //     <section className="py-12 bg-black border-t border-white/10">
 //       <div className="max-w-5xl mx-auto text-center px-6">
 //         <p className="text-gray-400 text-sm leading-relaxed">
-//           <strong className="text-white">Truelyzer’s Blog</strong> covers expert insights on{" "}
+//           <strong className="text-white">Trulyzer’s Blog</strong> covers expert insights on{" "}
 //           <span className="text-emerald-400 font-medium">Next.js</span>,{" "}
 //           <span className="text-emerald-400 font-medium">React</span>,{" "}
 //           full-stack development, and modern{" "}
 //           <span className="text-emerald-400 font-medium">digital design trends</span>{" "}
 //           that empower businesses to build faster, smarter, and more scalable online experiences.
-//           Explore guides, tutorials, and thought pieces crafted by the Truelyzer team to help you
+//           Explore guides, tutorials, and thought pieces crafted by the Trulyzer team to help you
 //           stay ahead in the evolving tech landscape.
 //         </p>
 //       </div>
@@ -73,7 +73,7 @@ const BlogSEOFooter = () => {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white">Truelyzer Blog</h3>
+              <h3 className="text-2xl font-bold text-white">Trulyzer Blog</h3>
             </div>
 
             <p className="text-gray-400 text-lg leading-relaxed mb-6">
@@ -83,7 +83,7 @@ const BlogSEOFooter = () => {
             </p>
 
             <p className="text-gray-500 text-sm leading-relaxed">
-              Explore guides, tutorials, and thought pieces crafted by the Truelyzer team to help you stay ahead in the evolving tech landscape. From beginner-friendly introductions to advanced techniques, we cover it all.
+              Explore guides, tutorials, and thought pieces crafted by the Trulyzer team to help you stay ahead in the evolving tech landscape. From beginner-friendly introductions to advanced techniques, we cover it all.
             </p>
           </motion.div>
 
@@ -183,7 +183,7 @@ const BlogSEOFooter = () => {
           className="mt-12 text-center"
         >
           <p className="text-xs text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Truelyzer is a web development agency specializing in Next.js, React, TypeScript, and modern web technologies. 
+            Trulyzer is a web development agency specializing in Next.js, React, TypeScript, and modern web technologies. 
             Our blog provides free tutorials, guides, and insights for developers looking to build high-performance web applications. 
             Topics include frontend development, backend architecture, UI/UX design, SEO optimization, performance tuning, and digital strategy.
           </p>

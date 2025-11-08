@@ -41,7 +41,7 @@ const features = [
 const WhyChooseUs = () => {
   return (
     <section
-      id="why-choose-truelyzer"
+      id="why-choose-trulyzer"
       className="relative bg-neutral-950 py-32 px-6 overflow-hidden"
     >
       {/* Animated Background */}
@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6"
           >
             <Sparkles className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm font-medium text-emerald-400">The Truelyzer Advantage</span>
+            <span className="text-sm font-medium text-emerald-400">The Trulyzer Advantage</span>
           </motion.div>
 
           <motion.h2
@@ -75,7 +75,7 @@ const WhyChooseUs = () => {
           >
             Why Top Brands
             <span className="block mt-2 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              Choose Truelyzer
+              Choose Trulyzer
             </span>
           </motion.h2>
 
@@ -163,7 +163,7 @@ const WhyChooseUs = () => {
                 Ready to Transform Your Digital Presence?
               </h3>
               <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-                Join 50+ successful businesses who&apos;ve elevated their brands with Truelyzer. 
+                Join 50+ successful businesses who&apos;ve elevated their brands with Trulyzer. 
                 Let&apos;s build something extraordinary together.
               </p>
 
@@ -205,7 +205,7 @@ const WhyChooseUs = () => {
 
       {/* SEO Content */}
       <div className="sr-only">
-        <h3>Why Choose Truelyzer for Web Development in Coimbatore</h3>
+        <h3>Why Choose Trulyzer for Web Development in Coimbatore</h3>
         <p>
           Professional web development company in Coimbatore offering fast website performance, 
           full-stack development with React and Next.js, transparent communication, SEO optimization, 

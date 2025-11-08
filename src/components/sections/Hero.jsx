@@ -57,7 +57,7 @@
 // //         transition={{ duration: 0.6 }}
 // //       >
 // //         <div className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></div>
-// //        <p> Build your digital presence with <span className="ml-1 font-semibold">Truelyzer</span> </p>
+// //        <p> Build your digital presence with <span className="ml-1 font-semibold">Trulyzer</span> </p>
 // //       </motion.div>
 
 // //       {/* Heading */}

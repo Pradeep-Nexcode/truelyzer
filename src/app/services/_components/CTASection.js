@@ -132,7 +132,7 @@ const CTASection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed"
               >
-                Join <span className="text-white font-semibold">50+ successful businesses</span> who&apos;ve transformed their digital presence with Truelyzer.
+                Join <span className="text-white font-semibold">50+ successful businesses</span> who&apos;ve transformed their digital presence with Trulyzer.
                 <span className="block mt-2 text-gray-500">Let&apos;s build something extraordinary together.</span>
               </motion.p>
 
@@ -253,9 +253,9 @@ const CTASection = () => {
 
       {/* SEO Content */}
       <div className="sr-only">
-        <h3>Start Your Web Development Project with Truelyzer - Coimbatore</h3>
+        <h3>Start Your Web Development Project with Trulyzer - Coimbatore</h3>
         <p>
-          Ready to build your website? Contact Truelyzer for professional web development services in Coimbatore. 
+          Ready to build your website? Contact Trulyzer for professional web development services in Coimbatore. 
           Expert React and Next.js development, fast delivery, dedicated support team, quality guaranteed. 
           Get a free consultation for your custom website, e-commerce platform, or web application project. 
           Serving businesses in Tamil Nadu with high-performance, SEO-optimized digital solutions.

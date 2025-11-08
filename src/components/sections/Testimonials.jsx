@@ -10,7 +10,7 @@ const testimonials = [
     role: "Founder & CEO",
     company: "KPN Fresh Market",
     quote:
-      "Working with Truelyzer was a game-changer. They delivered our e-commerce platform 2 weeks ahead of schedule, and sales increased 45% in the first month. The attention to performance optimization was exceptional.",
+      "Working with Trulyzer was a game-changer. They delivered our e-commerce platform 2 weeks ahead of schedule, and sales increased 45% in the first month. The attention to performance optimization was exceptional.",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
     results: ["45% sales increase", "2 weeks early", "0.9s load time"],
@@ -34,7 +34,7 @@ const testimonials = [
     role: "Marketing Director",
     company: "GoDecor Interiors",
     quote:
-      "From discovery to launch, Truelyzer was professional and transparent. The CMS they built makes updating our portfolio effortless. Lead generation jumped 87%, and our bounce rate dropped by 40%.",
+      "From discovery to launch, Trulyzer was professional and transparent. The CMS they built makes updating our portfolio effortless. Lead generation jumped 87%, and our bounce rate dropped by 40%.",
     image: "https://randomuser.me/api/portraits/men/56.jpg",
     rating: 5,
     results: ["87% lead increase", "-40% bounce rate", "Easy CMS"],

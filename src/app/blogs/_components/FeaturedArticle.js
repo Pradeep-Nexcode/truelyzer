@@ -8,7 +8,7 @@ import { ArrowRight, Clock, Calendar, User, TrendingUp, Bookmark, Share2 } from 
 const FeaturedArticle = () => {
   const article = {
     title: "Building Future-Ready Web Experiences",
-    excerpt: "Discover how Truelyzer blends design precision with performance-driven development to create digital products that scale and inspire. From concept to launch, we build web experiences that make a real impact.",
+    excerpt: "Discover how Trulyzer blends design precision with performance-driven development to create digital products that scale and inspire. From concept to launch, we build web experiences that make a real impact.",
     date: "October 20, 2025",
     readTime: "5 min read",
     author: "Priya Menon",

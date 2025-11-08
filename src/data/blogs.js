@@ -294,7 +294,7 @@ The web development community is welcoming and supportive. When you get stuck, c
 
 Start small. Build something today, even if it's just a basic HTML page with your name on it. Tomorrow, add some CSS styling. Next week, add JavaScript interactivity. Before you know it, you'll have a portfolio of projects and skills that open career doors.
 
-**Start your web dev journey today with Truelyzer!** Whether you need project ideas, learning resources, or tracking tools to monitor your progress, Truelyzer helps beginners stay organized, motivated, and on track toward becoming professional web developers. Don't wait for the perfect moment—the perfect moment is now.
+**Start your web dev journey today with Trulyzer!** Whether you need project ideas, learning resources, or tracking tools to monitor your progress, Trulyzer helps beginners stay organized, motivated, and on track toward becoming professional web developers. Don't wait for the perfect moment—the perfect moment is now.
 
 
 
@@ -725,7 +725,7 @@ The best news? You don't have to decide immediately. Start learning web developm
 
 Both paths offer excellent careers, continuous learning, and the satisfaction of building things people use. The web development community is welcoming, resources are abundant, and opportunities are everywhere in 2025.
 
-**Start building your first website today with Truelyzer!** Whether you choose frontend, backend, or full stack development, Truelyzer provides the tools, resources, and guidance to track your learning journey and build projects that matter. Your web development career starts with a single line of code—write it today.
+**Start building your first website today with Trulyzer!** Whether you choose frontend, backend, or full stack development, Trulyzer provides the tools, resources, and guidance to track your learning journey and build projects that matter. Your web development career starts with a single line of code—write it today.
 
 ---
 
@@ -9994,14 +9994,14 @@ app.use(cors({ origin: '*' })); // Dangerous!
 
 // ✅ Whitelist specific origins
 app.use(cors({
-  origin: 'https://truelyzer.com',
+  origin: 'https://trulyzer.com',
   credentials: true, // Allow cookies
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 // ✅ Or use a function for multiple origins
-const allowedOrigins = ['https://truelyzer.com', 'https://app.truelyzer.com'];
+const allowedOrigins = ['https://trulyzer.com', 'https://app.trulyzer.com'];
 
 app.use(cors({
   origin: (origin, callback) => {
@@ -10024,7 +10024,7 @@ res.cookie('sessionId', token, {
   secure: true, // HTTPS only
   sameSite: 'strict', // CSRF protection
   maxAge: 3600000, // 1 hour
-  domain: '.truelyzer.com', // Available to subdomains
+  domain: '.trulyzer.com', // Available to subdomains
   path: '/', // Available site-wide
 });
 </code>

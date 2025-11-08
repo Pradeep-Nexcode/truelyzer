@@ -11,7 +11,7 @@ animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6 }}
 className="text-5xl sm:text-6xl font-extrabold mb-6"
 >
-About <span className="text-emerald-400">Truelyzer</span>
+About <span className="text-emerald-400">Trulyzer</span>
 </motion.h1>
 <motion.p
 initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ transition={{ duration: 0.8, delay: 0.2 }}
 className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed"
 >
 We are a team of developers, designers, and thinkers crafting next-generation digital experiences.
-At Truelyzer, technology meets creativity to deliver powerful, user-centric solutions.
+At Trulyzer, technology meets creativity to deliver powerful, user-centric solutions.
 </motion.p> </section>
   {/* 🧠 Section 1: Our Mission */}
   <section className="py-20 px-6 sm:px-10 lg:px-20 bg-white/5 border-t border-white/10 text-center">

@@ -62,7 +62,7 @@ const services = [
       text: "from-emerald-400 to-emerald-600",
     },
     seo: {
-      title: "Professional Web Development Services in Coimbatore | Truelyzer",
+      title: "Professional Web Development Services in Coimbatore | Trulyzer",
       description:
         "Expert web development services using Next.js, React, and modern technologies. Build fast, scalable websites in Coimbatore, Tamil Nadu.",
       keywords: "web development, Next.js, React, Coimbatore, Tamil Nadu",
@@ -74,7 +74,7 @@ const services = [
         highlight: "Development Solutions",
       },
       description:
-        "At Truelyzer, we craft digital experiences that blend creativity, technology, and strategy. Our approach focuses on building performance-driven websites that not only look great but deliver measurable results for your business.",
+        "At Trulyzer, we craft digital experiences that blend creativity, technology, and strategy. Our approach focuses on building performance-driven websites that not only look great but deliver measurable results for your business.",
       highlights: [
         {
           icon: "⚡",
@@ -117,7 +117,7 @@ const services = [
         highlight: "With These Technologies",
       },
       description:
-        "Explore how Truelyzer has helped businesses grow with modern, performance-first web solutions that drive real results.",
+        "Explore how Trulyzer has helped businesses grow with modern, performance-first web solutions that drive real results.",
       showStats: true,
       projects: [
         {
@@ -326,7 +326,7 @@ const services = [
       text: "from-purple-400 to-pink-600",
     },
     seo: {
-      title: "Professional UI/UX Design Services | Truelyzer",
+      title: "Professional UI/UX Design Services | Trulyzer",
       description:
         "Expert UI/UX design services creating beautiful, user-centered experiences. Figma, prototyping, user research in Coimbatore.",
       keywords: "UI design, UX design, Figma, prototyping, user experience",
@@ -585,7 +585,7 @@ const services = [
       text: "from-blue-400 to-cyan-600",
     },
     seo: {
-      title: "SEO & Digital Marketing Services in Coimbatore | Truelyzer",
+      title: "SEO & Digital Marketing Services in Coimbatore | Trulyzer",
       description:
         "Professional SEO services to improve rankings and drive organic traffic. Technical SEO, content marketing in Tamil Nadu.",
       keywords:
@@ -792,7 +792,7 @@ const services = [
       text: "from-orange-400 to-red-600",
     },
     seo: {
-      title: "Website Performance Optimization Services | Truelyzer Coimbatore",
+      title: "Website Performance Optimization Services | Trulyzer Coimbatore",
       description:
         "Expert performance optimization services to speed up your website. Core Web Vitals, CDN setup, image optimization in Tamil Nadu.",
       keywords:
@@ -1060,7 +1060,7 @@ const services = [
       text: "from-yellow-400 to-orange-600",
     },
     seo: {
-      title: "Automation & API Integration Services | Truelyzer Coimbatore",
+      title: "Automation & API Integration Services | Trulyzer Coimbatore",
       description:
         "Professional automation services using APIs, webhooks, and AI. Streamline workflows and boost productivity in Tamil Nadu.",
       keywords:
@@ -1328,7 +1328,7 @@ const services = [
       text: "from-green-400 to-emerald-600",
     },
     seo: {
-      title: "Website Maintenance & Support Services | Truelyzer Coimbatore",
+      title: "Website Maintenance & Support Services | Trulyzer Coimbatore",
       description:
         "Professional website maintenance, security updates, backup, and 24/7 support services in Tamil Nadu. Keep your site secure and running smoothly.",
       keywords:

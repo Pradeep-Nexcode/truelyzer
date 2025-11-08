@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "Do you provide both design and development?",
     answer:
-      "Yes! Truelyzer handles everything from UI/UX design to full-stack development using React, Next.js, and GraphQL for seamless results. You get a complete end-to-end solution.",
+      "Yes! Trulyzer handles everything from UI/UX design to full-stack development using React, Next.js, and GraphQL for seamless results. You get a complete end-to-end solution.",
     icon: Palette,
     gradient: "from-purple-400 to-pink-500"
   },
@@ -117,7 +117,7 @@ const FAQSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            Everything you need to know about working with Truelyzer.
+            Everything you need to know about working with Trulyzer.
             <span className="block mt-2 text-gray-500">Can&apos;t find your answer? We&apos;re here to help.</span>
           </motion.p>
         </div>
@@ -242,7 +242,7 @@ const FAQSection = () => {
                   Book Free Consultation
                 </a>
                 <a
-                  href="mailto:hello@truelyzer.com"
+                  href="mailto:hello@trulyzer.com"
                   className="px-8 py-4 border-2 border-emerald-500/30 text-emerald-400 font-semibold rounded-full hover:bg-emerald-500/10 transition-all"
                 >
                   Email Us Directly
@@ -255,9 +255,9 @@ const FAQSection = () => {
 
       {/* SEO Content */}
       <div className="sr-only">
-        <h3>Truelyzer FAQ - Web Development Services in Coimbatore</h3>
+        <h3>Trulyzer FAQ - Web Development Services in Coimbatore</h3>
         <p>
-          Frequently asked questions about Truelyzer&apos;s web development services, pricing, 
+          Frequently asked questions about Trulyzer&apos;s web development services, pricing, 
           timelines, SEO optimization, UI/UX design, post-launch support, and technical capabilities. 
           Learn about our React and Next.js development process, project duration, maintenance services, 
           and how we help businesses in Coimbatore and Tamil Nadu build high-performance websites.
