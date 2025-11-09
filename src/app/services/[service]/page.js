@@ -7,6 +7,70 @@ import TechStack from "./_components/TechStack";
 import FAQSection from "./_components/FAQSection";
 import services from "@/data/services";
 
+// 🧩 Dynamic metadata for SEO
+export async function generateMetadata({ params }) {
+  const { service } = params || {};
+  const serviceData = services.find((s) => s.id === service);
+
+  if (!serviceData) {
+    return {
+      title: "Service Not Found | Trulyzer",
+      description:
+        "The service you're looking for is not available. Explore our range of web design, development, and digital solutions at Trulyzer.",
+      alternates: { canonical: `/services/${service}` },
+      robots: { index: false, follow: true },
+    };
+  }
+
+  const title = `${serviceData.name} Services | Trulyzer - Expert ${serviceData.name} Solutions`;
+  const description =
+    serviceData.metaDescription ||
+    `Trulyzer provides professional ${serviceData.name.toLowerCase()} services designed to help your business grow. Discover how our team builds modern, high-performance digital solutions.`;
+
+  const image = serviceData.image || "https://trulyzer.com/og-service.jpg";
+
+  return {
+    title,
+    description,
+    keywords: serviceData.keywords || [
+      `${serviceData.name.toLowerCase()} services`,
+      `${serviceData.name.toLowerCase()} company`,
+      `${serviceData.name.toLowerCase()} agency`,
+      "Trulyzer",
+      "digital solutions",
+      "web development",
+      "UI UX design",
+    ],
+    alternates: { canonical: `/services/${service}` },
+    openGraph: {
+      title,
+      description,
+      url: `https://trulyzer.com/services/${service}`,
+      siteName: "Trulyzer",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: `${serviceData.name} Services - Trulyzer`,
+        },
+      ],
+      locale: "en_IN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+    other: {
+      robots: "index, follow",
+    },
+  };
+}
+
+// 🧭 Page component
 export default function Page({ params }) {
   const { service } = params || {};
   const serviceData = services.find((s) => s.id === service);

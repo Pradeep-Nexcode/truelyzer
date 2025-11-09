@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Nunito } from "next/font/google";
-import Script from "next/script";
 import { Navbar, Footer } from "@/components";
 import { ContactModalProvider } from "../components/forms/ContactModal";
 
@@ -13,33 +12,72 @@ const nunito = Nunito({
 });
 
 export const metadata = {
-  title: "Trulyzer - Modern Web Development & Digital Solutions",
-  metadataBase: new URL("https://trulyzer.com"), // replace with your domain
+  title: "Trulyzer | Web Design, Development & Digital Solutions Agency in India",
+  description:
+    "Trulyzer is a full-service web design and development agency helping businesses build modern websites, eCommerce stores, and custom apps. From UX design to launch and SEO — we craft digital experiences that drive results.",
+  keywords: [
+    "web development agency",
+    "website design company",
+    "eCommerce development",
+    "UI UX design services",
+    "mobile app development",
+    "Next.js developer",
+    "React web agency",
+    "digital solutions company",
+    "custom website development India",
+    "Trulyzer",
+  ],
+  metadataBase: new URL("https://trulyzer.com"),
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    title: "Trulyzer – Build High-Performance Websites & Digital Experiences",
+    description:
+      "We help brands grow with modern websites, eCommerce, and custom app development. Let’s build something amazing together.",
+    url: "https://trulyzer.com",
+    siteName: "Trulyzer",
+    images: [
+      {
+        url: "https://trulyzer.com/og-image.jpg", // replace with your actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Trulyzer - Web Development Agency",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trulyzer | Modern Web Development & Digital Agency",
+    description:
+      "Empowering businesses with next-gen web, app, and eCommerce solutions. Crafted with performance, design, and strategy in mind.",
+    creator: "@trulyzer",
+    images: ["https://trulyzer.com/og-image.jpg"], // replace if needed
+  },
   other: {
-    "sitemap": "https://trulyzer.com/sitemap.xml", 
+    "sitemap": "https://trulyzer.com/sitemap.xml",
+    "robots": "index, follow",
   },
 };
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* 👇 Add this sitemap reference for SEO crawlers */}
+        {/* SEO Essentials */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-
-        {/* 👇 Add this Google Site Verification meta tag */}
-        <meta
-          name="google-site-verification"
-          content="cnvLS9KBqK6ffXI4_thFmd_J1d7caqhag5qgW4iKqH8"
-        />
+        <meta name="google-site-verification" content="cnvLS9KBqK6ffXI4_thFmd_J1d7caqhag5qgW4iKqH8" />
+        <meta name="author" content="Trulyzer" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#ffffff" />
       </head>
 
       <body className={`${nunito.variable} antialiased`}>
