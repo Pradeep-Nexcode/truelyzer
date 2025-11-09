@@ -126,7 +126,6 @@ const Blogs = () => {
              const Icon = post.icon || Code;
             const colors = colorVariants[post.color] || colorVariants.emerald;
 
-            console.log(Icon, "Icon")
 
             return (
               <motion.article

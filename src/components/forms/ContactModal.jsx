@@ -54,7 +54,6 @@ const ContactModalContent = ({ isOpen, closeModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
     setIsSubmitted(true)
     
     setTimeout(() => {
