@@ -2,6 +2,7 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 import { Navbar, Footer } from "@/components";
 import { ContactModalProvider } from "../components/forms/ContactModal";
+import Script from "next/script";
 
 const nunito = Nunito({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
@@ -28,9 +29,7 @@ export const metadata = {
     "Trulyzer",
   ],
   metadataBase: new URL("https://trulyzer.com"),
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Trulyzer – Build High-Performance Websites & Digital Experiences",
     description:
@@ -39,7 +38,7 @@ export const metadata = {
     siteName: "Trulyzer",
     images: [
       {
-        url: "https://trulyzer.com/og-image.jpg", // replace with your actual OG image
+        url: "https://trulyzer.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Trulyzer - Web Development Agency",
@@ -54,11 +53,11 @@ export const metadata = {
     description:
       "Empowering businesses with next-gen web, app, and eCommerce solutions. Crafted with performance, design, and strategy in mind.",
     creator: "@trulyzer",
-    images: ["https://trulyzer.com/og-image.jpg"], // replace if needed
+    images: ["https://trulyzer.com/og-image.jpg"],
   },
   other: {
-    "sitemap": "https://trulyzer.com/sitemap.xml",
-    "robots": "index, follow",
+    sitemap: "https://trulyzer.com/sitemap.xml",
+    robots: "index, follow",
   },
 };
 
@@ -74,13 +73,37 @@ export default function RootLayout({ children }) {
       <head>
         {/* SEO Essentials */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <meta name="google-site-verification" content="cnvLS9KBqK6ffXI4_thFmd_J1d7caqhag5qgW4iKqH8" />
+        <meta
+          name="google-site-verification"
+          content="cnvLS9KBqK6ffXI4_thFmd_J1d7caqhag5qgW4iKqH8"
+        />
         <meta name="author" content="Trulyzer" />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#ffffff" />
+
+        {/* Google Tag Manager */}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WHRC3RWV');
+          `}
+        </Script>
       </head>
 
       <body className={`${nunito.variable} antialiased`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WHRC3RWV"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
         <ContactModalProvider>
           <Navbar />
           {children}
