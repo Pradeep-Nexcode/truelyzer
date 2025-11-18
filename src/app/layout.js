@@ -13,7 +13,8 @@ const nunito = Nunito({
 });
 
 export const metadata = {
-  title: "Trulyzer | Web Design, Development & Digital Solutions Agency in India",
+  title:
+    "Trulyzer | Web Design, Development & Digital Solutions Agency in India",
   description:
     "Trulyzer is a full-service web design and development agency helping businesses build modern websites, eCommerce stores, and custom apps. From UX design to launch and SEO — we craft digital experiences that drive results.",
   keywords: [
@@ -82,7 +83,7 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff" />
 
         {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="afterInteractive">
+        <Script id="gtm-script" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -91,6 +92,16 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-WHRC3RWV');
           `}
         </Script>
+
+        {/* <!-- Google tag (gtag.js) --> */}
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BWLDV2G4K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6BWLDV2G4K');
+</script> */}
       </head>
 
       <body className={`${nunito.variable} antialiased`}>
