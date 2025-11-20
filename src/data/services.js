@@ -124,7 +124,7 @@ const services = [
           title: "E-commerce Redefined",
           description:
             "Built a blazing-fast online shopping experience with Next.js, Tailwind, and GraphQL for a global fashion brand.",
-          image: "/images/work1.jpg",
+          image: "/images/work1.png",
           category: "E-commerce",
           link: "/portfolio/ecommerce-fashion",
           tags: ["Next.js", "Tailwind", "GraphQL"],
@@ -137,7 +137,7 @@ const services = [
           title: "SaaS Dashboard Platform",
           description:
             "Developed a secure, scalable dashboard for a B2B SaaS company with real-time analytics and API integrations.",
-          image: "/images/work2.jpg",
+          image: "/images/work2.png",
           category: "SaaS",
           link: "/portfolio/saas-dashboard",
           tags: ["React", "Node.js", "MongoDB"],
