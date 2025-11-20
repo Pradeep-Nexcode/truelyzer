@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+const motion = dynamic(() => import("framer-motion"), { ssr: false });
+
 import Link from 'next/link';
 import { Search, TrendingUp, BookOpen, Sparkles, ArrowRight, Calendar, User } from 'lucide-react';
 

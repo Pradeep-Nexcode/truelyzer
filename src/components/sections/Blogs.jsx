@@ -123,7 +123,7 @@ const Blogs = () => {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {my_blogs.map((post, index) => {
-             const Icon = post.icon || Code;
+            const Icon = post.icon || Code;
             const colors = colorVariants[post.color] || colorVariants.emerald;
 
 
@@ -204,14 +204,15 @@ const Blogs = () => {
                         </div>
                         <span className="text-xs text-gray-500">{post.author.name}</span>
                       </div>
-
                       <Link
                         href={`/blogs/${post.id}`}
+                        aria-label={`Read more about ${post.title}`}
                         className={`inline-flex items-center gap-2 ${colors?.text} font-semibold text-sm group/link`}
                       >
                         Read More
                         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                       </Link>
+
                     </div>
                   </div>
                 </div>

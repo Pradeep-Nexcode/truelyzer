@@ -1,21 +1,31 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Clock, Calendar, User, TrendingUp, Bookmark, Share2 } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+const motion = dynamic(() => import("framer-motion"), { ssr: false });
+
+import {
+  ArrowRight,
+  Clock,
+  Calendar,
+  User,
+  TrendingUp,
+  Bookmark,
+  Share2,
+} from "lucide-react";
 
 const FeaturedArticle = () => {
   const article = {
     title: "Building Future-Ready Web Experiences",
-    excerpt: "Discover how Trulyzer blends design precision with performance-driven development to create digital products that scale and inspire. From concept to launch, we build web experiences that make a real impact.",
+    excerpt:
+      "Discover how Trulyzer blends design precision with performance-driven development to create digital products that scale and inspire. From concept to launch, we build web experiences that make a real impact.",
     date: "October 20, 2025",
     readTime: "5 min read",
     author: "Priya Menon",
     category: "Web Development",
     image: "/images/blog-featured.jpg",
     tags: ["Next.js", "Performance", "Design"],
-    views: "2.5K"
+    views: "2.5K",
   };
 
   return (
@@ -45,7 +55,9 @@ const FeaturedArticle = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6"
           >
             <TrendingUp className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm font-medium text-emerald-400">Featured Story</span>
+            <span className="text-sm font-medium text-emerald-400">
+              Featured Story
+            </span>
           </motion.div>
 
           <motion.h2
@@ -65,7 +77,8 @@ const FeaturedArticle = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto"
           >
-            Our most popular article this week—packed with insights, tutorials, and real-world examples.
+            Our most popular article this week—packed with insights, tutorials,
+            and real-world examples.
           </motion.p>
         </div>
 
@@ -98,7 +111,9 @@ const FeaturedArticle = () => {
 
                 {/* Category Badge */}
                 <div className="absolute top-6 left-6 px-4 py-2 bg-emerald-500/90 backdrop-blur-sm rounded-full">
-                  <span className="text-sm font-semibold text-white">{article.category}</span>
+                  <span className="text-sm font-semibold text-white">
+                    {article.category}
+                  </span>
                 </div>
 
                 {/* Action Buttons */}
@@ -113,7 +128,9 @@ const FeaturedArticle = () => {
 
                 {/* Views Badge */}
                 <div className="absolute bottom-6 left-6 px-3 py-1.5 bg-neutral-900/80 backdrop-blur-sm border border-neutral-700 rounded-full">
-                  <span className="text-xs font-medium text-gray-400">{article.views} views</span>
+                  <span className="text-xs font-medium text-gray-400">
+                    {article.views} views
+                  </span>
                 </div>
               </div>
 
@@ -179,13 +196,15 @@ const FeaturedArticle = () => {
           className="mt-12 flex flex-wrap justify-center gap-8"
         >
           {[
-            { label: 'Average Read Time', value: '6 min' },
-            { label: 'Articles Published', value: '50+' },
-            { label: 'Monthly Readers', value: '10K+' },
-            { label: 'Topics Covered', value: '15+' }
+            { label: "Average Read Time", value: "6 min" },
+            { label: "Articles Published", value: "50+" },
+            { label: "Monthly Readers", value: "10K+" },
+            { label: "Topics Covered", value: "15+" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-2xl font-bold text-emerald-400 mb-1">{stat.value}</div>
+              <div className="text-2xl font-bold text-emerald-400 mb-1">
+                {stat.value}
+              </div>
               <div className="text-sm text-gray-500">{stat.label}</div>
             </div>
           ))}

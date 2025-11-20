@@ -1,6 +1,7 @@
 // // 'use client';
 
-// // import { motion } from 'framer-motion';
+// //const motion = dynamic(() => import("framer-motion"), { ssr: false });
+
 // // import Link from 'next/link';
 
 // // const Hero = () => {
@@ -123,7 +124,8 @@
 
 'use client';
 
-import { motion } from 'framer-motion';
+const motion = dynamic(() => import("framer-motion"), { ssr: false });
+
 import Link from 'next/link';
 
 const Hero = () => {
