@@ -1,11 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin, Send, ExternalLink } from "lucide-react";
 import Link from "next/link";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
+  const [particles, setParticles] = useState([]);
+
+  // ▶ Generate random positions ONLY on the client
+  useEffect(() => {
+    const temp = [...Array(8)].map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: Math.random() * 2,
+      duration: 4 + Math.random() * 2,
+    }));
+    setParticles(temp);
+  }, []);
 
   const quickLinks = [
     { name: "Home", link: "/" },
@@ -29,31 +41,28 @@ const Footer = () => {
 
   const handleSubscribe = () => {
     if (email) {
-      console.log('Subscribing:', email);
-      setEmail('');
+      console.log("Subscribing:", email);
+      setEmail("");
     }
   };
 
   return (
     <footer className="relative bg-neutral-950 text-gray-300 overflow-hidden">
-      {/* Subtle Background */}
+      {/* Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:80px_80px] opacity-30"></div>
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl"></div>
 
-      {/* Floating Particles - Reduced */}
-      {[...Array(8)].map((_, i) => (
+      {/* 🌟 Hydration-safe floating particles */}
+      {particles.map((pos, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-emerald-400 rounded-full opacity-20"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
+          style={{ left: pos.left, top: pos.top }}
           animate={{ y: [0, -25, 0], opacity: [0.1, 0.25, 0.1] }}
           transition={{
-            duration: 4 + Math.random() * 2,
+            duration: pos.duration,
+            delay: pos.delay,
             repeat: Infinity,
-            delay: Math.random() * 2,
           }}
         />
       ))}

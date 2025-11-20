@@ -157,33 +157,37 @@ const Portfolio = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{
-                    opacity: hoveredIndex === index ? 1 : 0,
-                    y: hoveredIndex === index ? 0 : -10
-                  }}
-                  className="absolute top-4 right-4 flex gap-2"
-                >
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white/90 hover:bg-white rounded-lg transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ExternalLink className="w-4 h-4 text-slate-900" />
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-white/90 hover:bg-white rounded-lg transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <Github className="w-4 h-4 text-slate-900" />
-                  </a>
-                </motion.div>
+                {/*  <motion.div
+  initial={{ opacity: 0, y: -10 }}
+  animate={{
+    opacity: hoveredIndex === index ? 1 : 0,
+    y: hoveredIndex === index ? 0 : -10
+  }}
+  className="absolute top-4 right-4 flex gap-2"
+>
+  <a
+    href={project.liveUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`Open ${project.title} live demo`}
+    className="p-2 bg-white/90 hover:bg-white rounded-lg transition-colors"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <ExternalLink className="w-4 h-4 text-slate-900" />
+  </a>
+
+  <a
+    href={project.githubUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`View ${project.title} GitHub repository`}
+    className="p-2 bg-white/90 hover:bg-white rounded-lg transition-colors"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <Github className="w-4 h-4 text-slate-900" />
+  </a>
+</motion.div>
+ */}
               </div>
 
               {/* Content */}

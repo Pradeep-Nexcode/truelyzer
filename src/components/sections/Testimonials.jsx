@@ -151,7 +151,7 @@ const Testimonials = () => {
                   </div>
                   
                   <div className="flex-1">
-                    <h4 className="font-bold text-gray-900 text-lg">{t.name}</h4>
+                    <h2 className="font-bold text-gray-900 text-lg">{t.name}</h2>
                     <p className="text-sm text-gray-600">{t.role}</p>
                     <p className="text-xs text-emerald-600 font-semibold">{t.company}</p>
                   </div>

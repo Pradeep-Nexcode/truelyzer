@@ -7,7 +7,7 @@ import { useContactModal } from "../forms/ContactModal";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
- const { openModal } = useContactModal()
+  const { openModal } = useContactModal()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,11 +29,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
@@ -60,9 +59,9 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center">
             <button
-               onClick={() => {
-                  openModal();
-                }}
+              onClick={() => {
+                openModal();
+              }}
               className="relative overflow-hidden inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-emerald-500 hover:bg-emerald-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]"
             >
               Get Quote
@@ -72,6 +71,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             className="lg:hidden p-2 rounded-md text-slate-300 hover:text-emerald-400 focus:outline-none"
           >
             <svg
@@ -97,6 +97,7 @@ const Navbar = () => {
               )}
             </svg>
           </button>
+
         </div>
 
         {/* Mobile Navigation */}
@@ -114,7 +115,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <button
-               
+
                 className="block mx-3 mt-4 bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-2.5 rounded-full font-medium text-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(16,185,129,0.4)]"
                 onClick={() => {
                   setIsMobileMenuOpen(false);

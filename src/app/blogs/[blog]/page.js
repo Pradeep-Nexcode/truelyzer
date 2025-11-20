@@ -174,9 +174,9 @@ const BlogPostPage = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">
+                  <p className="font-semibold text-white">
                     {post.author.name}
-                  </h4>
+                  </p>
                   <p className="text-gray-400 text-sm">{post.author.role}</p>
                 </div>
               </div>
@@ -271,9 +271,9 @@ const BlogPostPage = () => {
               />
             </div>
             <div>
-              <h4 className="text-xl font-bold text-white mb-2">
+              <p className="text-xl font-bold text-white mb-2">
                 About {post.author.name}
-              </h4>
+              </p>
               <p className="text-gray-400 mb-4">{post.author.bio}</p>
               <div className="flex gap-3">
                 <button className="p-2 bg-neutral-800 rounded-lg hover:bg-emerald-500/20 transition-all">

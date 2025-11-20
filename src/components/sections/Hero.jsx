@@ -120,7 +120,7 @@
 
 // // export default Hero;
 
- 
+
 'use client';
 
 import { motion } from 'framer-motion';
@@ -134,18 +134,18 @@ const Hero = () => {
     >
 
       <motion.div
-         className="absolute text-5xl text-emerald-300 bottom-40 left-32"
-         animate={{ scale: [1, 1.8, 1], rotate: [0, -15, 0] }}
-         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-       >
-         ✺
-       </motion.div>  <motion.div
-         className="absolute text-5xl text-emerald-300 top-50 right-32"
-         animate={{ scale: [1, 1.8, 1], rotate: [0, -15, 0] }}
-         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-       >
-         ✺
-       </motion.div>
+        className="absolute hidden md:flex text-5xl text-emerald-300 bottom-40 left-32"
+        animate={{ scale: [1, 1.8, 1], rotate: [0, -15, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        ✺
+      </motion.div>  <motion.div
+        className="absolute hidden md:flex text-5xl text-emerald-300 top-50 right-32"
+        animate={{ scale: [1, 1.8, 1], rotate: [0, -15, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        ✺
+      </motion.div>
       {/* 🌌 Background layers */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:80px_80px] opacity-10"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(16,185,129,0.08),transparent_60%)]"></div>

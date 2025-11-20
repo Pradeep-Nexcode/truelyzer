@@ -34,6 +34,7 @@ export const ContactModalProvider = ({ children }) => {
 // Modal Content Component
 const ContactModalContent = ({ isOpen, closeModal }) => {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, SetIsLoading] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,16 +53,50 @@ const ContactModalContent = ({ isOpen, closeModal }) => {
     "Other"
   ]
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setIsSubmitted(true)
-    
-    setTimeout(() => {
-      setIsSubmitted(false)
-      closeModal()
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" })
-    }, 3000)
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Show success animation after API success only
+    try {
+      SetIsLoading(true)
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+
+        SetIsLoading(false)
+
+        // Reset & close after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          closeModal();
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            message: "",
+          });
+        }, 3000);
+      } else {
+        SetIsLoading(false)
+        alert("Failed to send message!");
+      }
+    } catch (error) {
+      SetIsLoading(false)
+      console.error("Modal Contact Error:", error);
+      alert("Something went wrong!");
+    }
+  };
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -103,9 +138,9 @@ const ContactModalContent = ({ isOpen, closeModal }) => {
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                   }}
-                  animate={{ 
-                    y: [0, -30, 0], 
-                    opacity: [0, 0.4, 0] 
+                  animate={{
+                    y: [0, -30, 0],
+                    opacity: [0, 0.4, 0]
                   }}
                   transition={{
                     duration: 3 + Math.random() * 2,
@@ -276,14 +311,19 @@ const ContactModalContent = ({ isOpen, closeModal }) => {
 
                   {/* Submit Button */}
                   <motion.button
+                    disabled={isLoading}   // ✅ correct
                     onClick={handleSubmit}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-emerald-500/50 transition-all"
+                    whileHover={{ scale: isLoading ? 1 : 1.02 }}
+                    whileTap={{ scale: isLoading ? 1 : 0.98 }}
+                    className={`w-full py-4 rounded-xl text-white font-semibold text-lg flex items-center justify-center gap-2 transition-all
+    bg-gradient-to-r from-emerald-500 to-emerald-600
+    ${isLoading ? "opacity-50 cursor-not-allowed" : "hover:shadow-lg hover:shadow-emerald-500/50"}
+  `}
                   >
-                    Send Message
-                    <Send className="w-5 h-5" />
+                    {isLoading ? "Sending..." : "Send Message"}
+                    {!isLoading && <Send className="w-5 h-5" />}
                   </motion.button>
+
 
                   <p className="text-xs text-gray-500 text-center">
                     We respect your privacy. Your information is safe with us.
