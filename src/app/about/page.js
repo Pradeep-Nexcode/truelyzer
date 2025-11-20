@@ -1,7 +1,7 @@
 'use client';
 
+import { motion } from 'framer-motion';
 
-const motion = dynamic(() => import("framer-motion"), { ssr: false });
 
 
 export default function Page() {
