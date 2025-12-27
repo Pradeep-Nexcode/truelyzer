@@ -3,6 +3,9 @@ export { default as Navbar } from './layout/Navbar';
 
 // Section Components
 export { default as Hero } from './sections/Hero';
+export { default as OurServices } from './sections/OurServices';
+
+
 export { default as Portfolio } from './sections/Portfolio';
 export { default as Process} from './sections/Process'
 export { default as CursorParticles} from './effects/CursorParticles'
